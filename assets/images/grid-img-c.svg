@@ -1,0 +1,19 @@
+<svg id="Group_2585" data-name="Group 2585" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="130" height="130" viewBox="0 0 130 130">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.074" y1="-0.408" x2="0.775" y2="1.771" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0c6291"/>
+      <stop offset="1" stop-color="#a30000"/>
+    </linearGradient>
+  </defs>
+  <circle id="Ellipse_4" data-name="Ellipse 4" cx="65" cy="65" r="65" fill="url(#linear-gradient)"/>
+  <g id="Group_2584" data-name="Group 2584">
+    <g id="icon" transform="translate(41.289 41.287)">
+      <g id="Group_16" data-name="Group 16" transform="translate(17.384)">
+        <path id="Path_20" data-name="Path 20" d="M35.456,41.071a12.647,12.647,0,0,1-9-3.728,2.814,2.814,0,0,1,3.98-3.98,7.1,7.1,0,0,0,10.042,0l7.489-7.489A7.1,7.1,0,0,0,37.924,15.831l-3.206,3.206a2.814,2.814,0,0,1-3.98-3.98l3.207-3.2a12.729,12.729,0,1,1,18,18l-7.489,7.489A12.649,12.649,0,0,1,35.456,41.071Z" transform="translate(-25.631 -8.13)" fill="none" stroke="#fff" stroke-width="2"/>
+      </g>
+      <g id="Group_17" data-name="Group 17" transform="translate(0 14.486)">
+        <path id="Path_21" data-name="Path 21" d="M20.856,55.652a12.729,12.729,0,0,1-9-21.73l7.489-7.489a12.745,12.745,0,0,1,18,0,2.814,2.814,0,1,1-3.98,3.98,7.108,7.108,0,0,0-10.042,0L15.835,37.9A7.1,7.1,0,0,0,25.877,47.945l3.206-3.206a2.814,2.814,0,1,1,3.98,3.98l-3.206,3.206A12.648,12.648,0,0,1,20.856,55.652Z" transform="translate(-8.133 -22.712)" fill="none" stroke="#fff" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

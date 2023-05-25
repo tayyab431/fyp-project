@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/5c515fb3d0.js" crossorigin="anonymous"></script>
+    <title>seller</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href=" Home-page.css">
+    <link href="http://fonts.googleapis.com/css?family=KaushanScript|Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://kit.fontawesome.com/5c515fb3d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   
+    <script src="https://kit.fontawesome.com/5c515fb3d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+    <body> 
+    <header class="header">
+      <nav>
+        <div class="navbar">
+          <i class='bx bx-menu'></i>
+          <div class="logo"><a href="#"><img src="images/WHITE-COLOR-LOGO.png"></a></div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo"><a href="#"><img src="images/WHITE-COLOR-LOGO.png"></a> </span>
+              <i class='bx bx-x' ></i>
+            </div>
+            <ul class="links">
+              <li><a href="Home-page.php">HOME</a></li>
+              
+              <li>
+                <a href="accessories.html">Accessories</a>
+                
+              </li>
+              <li>
+                <a href="index.html">Manufecturers</a>
+              </li>
+              <li><a href="#">Language</a>
+                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                <ul class="js-sub-menu sub-menu">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Urdu</a></li>
+                </ul>
+              </li>
+  
+              <li><a href="#">Help & Support</a>
+                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                <ul class="js-sub-menu sub-menu">
+                  <li><a href="#">Return & Refund</a></li>
+                  <li><a href="#">Feedback</a></li>
+                </ul>
+              
+              </li>
+              <li><a href="login.php">Login</a>
+                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                <ul class="js-sub-menu sub-menu">
+                  <li><a href="#">Sign In</a></li>
+                  <li><a href="#">Sign UP</a></li>
+                  <li><a href="#">Join</a></li>
+                </ul>
+              
+              </li>
+            </ul>
+          </div>
+          
+          <div class="search-box">
+            
+            <i class='bx bx-search'></i>
+            <div class="input-box">
+              <input type="text" placeholder="Search...">
+  
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="icons">
+      <a href="#" class="btn">join</a>
+        <div class="fas fa-search" id="search-btn"></div>
+       <a href="login.html"> <div class="fas fa-user" id="user-btn"></div> </a>
+        <div class="fas fa-bars" id="menu-btn"></div>   
+    </div>
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+    </header>
+        
+<div class="hero">
+<div class="form-box">
+    <div class="button-box">
+        <div id="btn"></div>
+    <button type="button" class="toggle-btn" onclick="login()">SIGN IN</button>
+    <button type="button" class="toggle-btn" onclick="register()">SIGN UP</button>
+    </div>
+    <div class="social-icon">
+        <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+  <h1 class="heading"></h1>
+  <h1 class="heading"></h1>
+<form id="login" class="input-group">
+ 
+    <input type="text"
+    class="input-feild" placeholder="User Name" required>
+
+    <input type="text" class="input-feild" placeholder="Enter Password" required>
+     
+    <input type="checkbox" class="checkbox"> <span>Remember Password</span>
+    <button type="submit" class="submit-btn">SIGN IN</button>
+</form>
+
+<form id="register" class="input-group">
+ 
+    <input type="text"
+    class="input-feild" placeholder="User Name" required>
+
+    <input type="email"
+    class="input-feild" placeholder="Email ID" required>
+
+    <input type="text"
+    class="input-feild" placeholder="Enter Password" required>
+    
+    <input type="text"
+    class="input-feild" placeholder="Re-write Password" required>
+
+   
+     
+    <input type="checkbox" class="checkbox"> <span>I agree to the terms & Conditions</span>
+    <button type="submit" class="submit-btn">SIGN UP</button>
+</form>
+</div>
+
+</div>
+<div class="container">
+    <section class="portfolio-b">
+        <div class="port-fo-text">
+            <p>
+                Let’s build something amazing together.
+                 Empower your brand and products with modern designs backed with clean codes. 
+                 We offer top-tier functionality through personalized website design and development solutions. 
+                 We don’t believe in imitation, rather succeeding in meaningful originality.  Our designing masters,
+                  development geeks, and SEO wizards 
+                are well-versed with contemporary tools and tactics to make your online presence powerful.
+            </p>
+        </div>
+        <div class="port-button d-flex">
+            <ul id="changerr" class="list-style button-ul" onclick="clickbutton()">
+                <li><a href="#" id="changer1" class="toggle-btn active" onclick="toggleSection('sec-portfolio1'); return false;">Hoodies</a> </li>
+                <li><a href="#" id="changer2"  class="toggle-btn" onclick="toggleSection('sec-portfolio2') ; return false;">T-Shirts</a></li>    
+                <li><a href="#" id="changer3" class="toggle-btn" onclick="toggleSection('sec-portfolio3'); return false;">Jackets</a></li>
+                <li><a href="#" id="changer4"  class="toggle-btn" onclick="toggleSection('sec-portfolio4'); return false;">More</a></li>
+            </ul>
+        </div>
+    </div>
+    </section>
+    <!--web development start-->
+    <section id="sec-portfolio1" class="sec-porfo">
+    <section class="project-portfolio">
+        <div class="container">
+            <div class="project-head d-flex padd-w">
+                <div class="head-button head-w">
+                    <div>
+                    <h2>
+                        WE Offered TO <br> LAST
+                    </h2>
+                    <button type="button">
+                        Let's Talk about Our Manufacturers
+                    </button>
+                    </div>
+                </div>
+                <div class="img-side  img-w">
+                    <img src="images/413h2fkY11L._AC_UF1000_1000_QL80_-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="grid-scroll">
+        <div class="container">
+            <div class="scroll-main">
+                <div class="scroll-head">
+                    <div class="scroll-images left-right">
+                        <img src="images/hoodies-4.jpg" alt="tickfawtravel">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                               <a href="#"> <h6> <span>Manufecturer  </span>High Quality  
+                               <br> <i class="fa fa-link"></i> </h6></a>
+    
+                        </div>
+                        
+                    </div>
+                    <div class="scroll-images left-right">
+                        <img src="images/hoodie-1.webp" alt="stilrenaklockor">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                            <a href="#"> <h6> <span>Manufecturer</span>
+                                <br> <i class="fa fa-link"></i> </h6></a>
+    
+                     </div>
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/hoodies-5.jpg" alt="lpgstage">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                            <a href="#"> <h6> <span>Manufecturer</span>
+                                <br> <i class="fa fa-link"></i> </h6></a>
+    
+                     </div>
+                    </div>
+                    <div class="scroll-images left-right">
+                        <img src="images/hoodies-6.webp" alt="salesandtechnology">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                            <a href="#"> <h6> <span>Manufecturer</span>
+                                <br> <i class="fa fa-link"></i> </h6></a>
+    
+                     </div>
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/hoodies-7.jpg" alt="1f71ff8c">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                            <a href="#"> <h6> <span>Manufecturer</span>
+                                <br> <i class="fa fa-link"></i> </h6></a>
+    
+                     </div>
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/hoodies-8.jpg" alt="jlgtampabay">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                            <a href="#"> <h6> <span>Manufecturer</span>
+                                <br> <i class="fa fa-link"></i> </h6></a>
+    
+                     </div>
+                    </div>
+    
+                    <div class="scroll-images ">
+                        <img src="images/hoodies-13.jpg" alt="screenshot-hreventures">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                            <a href="#"> <h6> <span>Manufecturer</span>
+                                <br> <i class="fa fa-link"></i> </h6></a>
+    
+                     </div>
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/hoodies-10.jpg" alt="haelaw">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                            <a href="#"> <h6> <span>Manufecturer</span>
+                                <br> <i class="fa fa-link"></i> </h6></a>
+    
+                     </div>
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/hoodies-14.jpg" alt="getvested">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                            <a href="#"> <h6> <span>manufecturers</span>
+                                <br> <i class="fa fa-link"></i> </h6></a>
+    
+                     </div>
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/hoodies-13.jpg" alt="getvested">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        <div class="link-g">
+                            
+                            <a href="#"> <h6> <span>Manufecturer</span>
+                                <br> <i class="fa fa-link"></i> </h6></a>
+    
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    
+    <!--web development  end-->
+    <!--mobile development start end-->
+    <section id="sec-portfolio2" class="sec-porfo">
+    <section class="project-portfolio">
+        <div class="container">
+            <div class="project-head d-flex padd-m ">
+                <div class="head-button head-m">
+                    <div>
+                    <h2>
+                        WE LOCK ON <br>
+                        QUALITY
+                    </h2>
+                    <button type="button">
+                        Let's Talk about Our Manufacturers
+                    </button>
+                    </div>
+                </div>
+                <div class="img-side img-side-m">
+                    <img src="images/clothes-1-removebg-preview__1_-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="grid-scrolll">
+        <div class="container">
+            <div class="scroll-main">
+                <div class="scroll-head-mobile">
+                    <div class="scroll-images ">
+                        <img src="images/24hrclaims-1.png" alt="tickfawtravel">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <!--mobile development end-->
+    <!--ui/ux development start -->
+    <section id="sec-portfolio3" class="sec-porfo">
+    <section class="project-portfolio">
+        <div class="container">
+            <div class="project-head d-flex padd-ui">
+                <div class="head-button head-ui">
+                    <div>
+                    <h2>
+                        WE Choose The <br> Best
+                    </h2>
+                    <button type="button">
+                        Let's Talk about Our Manufacturers
+                    </button>
+                    </div>
+                </div>
+                <div class="img-side img-uiux">
+                    <img src="images/jacket-1-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="grid-scroll">
+        <div class="container">
+            <div class="scroll-main">
+                <div class="scroll-head">
+                    <div class="scroll-images">
+                        <img src="images/988443ff-8348-42a3-8cfb-756f0b407305.png" alt="tickfawtravel">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                      
+                        
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/44e6a104-0efb-4457-8dc4-ee7128b26588.jpg" alt="stilrenaklockor">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                      
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/4e087d9e-f92d-4595-9dbe-ad84811b33fb.jpg" alt="lpgstage">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                      
+                    </div>
+                    <div class="scroll-images left-right">
+                        <img src="images/f5f5b4aa-5bbc-4528-8107-bf62c174eced.jpg" alt="salesandtechnology">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                      
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/d214233e-9a9c-476a-b550-8d5818f8e05c.jpg" alt="1f71ff8c">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                       
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/4e245df7-4106-4178-9e5b-b98724e28d30.jpg" alt="jlgtampabay">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                       
+                    </div>
+    
+                    <div class="scroll-images">
+                        <img src="images/164f9ef1-79e7-4a74-833d-2d2bed57886c.jpg" alt="screenshot-hreventures">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                     
+                    </div>
+                    <div class="scroll-images left-right">
+                        <img src="images/26423402-7c33-48ba-9bf1-ea9357e5e941.jpg" alt="haelaw">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                     
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/19775ec0-1e7d-4c8d-95c9-c03fc313b87c.jpg" alt="getvested">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                      
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/1af2e4c1-97fa-4d33-a4dc-f40a0395f29b-1.jpg" alt="getvested">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <!--ui/ux  development end-->
+    <!--graphic design   development start-->
+    <section id="sec-portfolio4" class="sec-porfo">
+    <section class="project-portfolio">
+        <div class="container">
+            <div class="project-head d-flex padd-g">
+                <div class="head-button head-g">
+                    <div>
+                    <h2>
+                        WE STRIVE TO <br>
+                        INSPIRE
+                    </h2>
+                    <button type="button">
+                        Let's Talk about Our Manufacturers
+                    </button>
+                    </div>
+                </div>
+                <div class="img-side img-graphic">
+                    <img src="images/clothes-2-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="grid-scroll">
+        <div class="container">
+            <div class="scroll-main">
+                <div class="scroll-head">
+                    <div class="scroll-images">
+                        <img src="images/54864dbc-cc69-4066-9579-194b886f3153.jpg" alt="tickfawtravel">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                      
+                        
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/c3abf938-829c-4c1c-9d4f-d4d5b37001e4.jpg" alt="stilrenaklockor">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                      
+                    </div>
+                    <div class="scroll-images left-right">
+                        <img src="images/e31f6195-be28-46d4-8698-d714be3eaa6c.jpg" alt="lpgstage">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                      
+                    </div>
+                    <div class="scroll-images left-right">
+                        <img src="images/b3fd5e9a-4efd-4337-9fca-42ad021bde40.jpg" alt="salesandtechnology">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                      
+                    </div>
+                    <div class="scroll-images left-right">
+                        <img src="images/d6ed886c-c777-43d7-a672-6119d30b98bc.jpg" alt="1f71ff8c">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                       
+                    </div>
+                    <div class="scroll-images">
+                        <img src="images/4d6c2df7-3c52-4302-9a47-6573b4bdb8a0.jpg" alt="jlgtampabay">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                       
+                    </div>
+    
+                    <div class="scroll-images left-right">
+                        <img src="images/506255ea-87b9-4bea-a0db-ee742ae82925.jpg" alt="screenshot-hreventures">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                     
+                    </div>
+                    <div class="scroll-images left-right">
+                        <img src="images/059009dc-2266-4aab-a061-367e65b23cc3.jpg" alt="haelaw">
+                        <div class="lable-grid d-flex">
+                            <span>n</span>
+                            <span>e</span>
+                            <span>w</span>
+                        </div>
+                     
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    
+    <!--graphic design  development end-->
+    
+
+<script>
+    var x= document.getElementById("login");
+    var y= document.getElementById("register");
+    var z= document.getElementById("btn");
+    
+    function register()
+    {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px"
+
+    }
+    function login()
+    {
+        x.style.left = "50px";
+        y.style.left = "-400px";
+        z.style.left = "0px"
+    }
+
+</script>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+          <img class="footer-logo" src="images/WHITE-COLOR-LOGO.png" alt="">
+          <p>Find high-quality services at every price point. No hourly rates, 
+            just project-based pricing.</p>    
+      </div>
+      <div class="footer-col">
+        <h4>Site Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Manufecturers</a></li>
+          <li><a href="#">Custom order</a></li>
+         <li><a href="#">Login</a></li>
+          <li><a href="#">Help & Support</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accessories</h4>
+        <ul>
+          <li><a href="#">Hoodies</a></li>
+          <li><a href="#">T-Shits</a></li>
+          <li><a href="#">Track-Suit</a></li>
+          <li><a href="#">Sweat-suits</a></li>
+          <li><a href="#">Sports-Wear</a></li>
+          <li><a href="#">Jackets</a></li>
+          <li><a href="#">Jeans</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="CB.js"></script>
+ 
+</body>
+ 
+</html>
