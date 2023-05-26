@@ -68,7 +68,22 @@ include($path . '/language/language-code.php');
         <input type="text" placeholder="<?php echo $top_nav[$language]['12']?>">
         <i class='bx bx-search'></i>
     </div>
+   
+
   </div>
+  <div class="dropdown">
+  <button class="dropdown-toggle" type="button" id="dropdownMenuButton">
+    <span class="dropdown-profile">
+      <img src="housewife-browsing.jpg" alt="Profile Picture" class="profile-picture">
+    </span>
+    <span class="dropdown-icon">▼</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li class="dropdown-item">My profile</li>
+    <li class="dropdown-item">Catagories</li>
+    <li class="dropdown-item">log out</li>
+  </ul>
+</div>
   </div>
   </div>
   </nav>

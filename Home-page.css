@@ -82,8 +82,72 @@ body.dark{
     display: none; /* Display the dark logo when in dark mode */
   }
   
- 
+   /*dropdown*/
+   .dropdown {
+    position: relative;
+    left: 94px;
+    display: inline-block;
+  }
   
+  .dropdown-toggle {
+    background-color: var(--diff);
+    border: none;
+    padding: 10px;
+    border-radius: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-profile {
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-picture {
+    width: 100%;
+    height: inherit;
+  }
+  
+  .dropdown-icon {
+    font-size: 12px;
+    transform: translateY(-1px);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    width: 87px;
+    background-color: var(--diff);
+    border: 1px solid var(--diff);
+    border-radius: 2px 57px 34px 35px;
+    padding: 10px;
+    display: none;
+    z-index: 1;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  .dropdown-item {
+    border-radius: 1px 31px 0px 12px;
+    cursor: pointer;
+    padding: 9px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--text-color);
+    color: var(--body-color);
+  }
+  
+  
+  /*dropdown*/
   
   
 nav{

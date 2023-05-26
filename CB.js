@@ -102,4 +102,27 @@ button.addEventListener('click', function() {
 //chatbot code end
 
 //language php code
- 
+document.addEventListener("DOMContentLoaded", function() {
+  var dropdownToggle = document.querySelector(".dropdown-toggle");
+  var dropdownMenu = document.querySelector(".dropdown-menu");
+
+  dropdownToggle.addEventListener("click", function() {
+    dropdownMenu.classList.toggle("show");
+  });
+
+  document.addEventListener("click", function(event) {
+    if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.remove("show");
+    }
+  });
+
+  var dropdownItems = document.querySelectorAll(".dropdown-item");
+
+  dropdownItems.forEach(function(item) {
+    item.addEventListener("click", function() {
+      var selectedOption = this.textContent;
+      document.querySelector(".dropdown-text").textContent = selectedOption;
+      dropdownMenu.classList.remove("show");
+    });
+  });
+});

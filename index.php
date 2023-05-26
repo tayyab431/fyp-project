@@ -5,21 +5,6 @@ include($path . '/language/language-code.php');
 
 ?>
 
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-$en_select = '';
-$urdu_select = '';
-$language='';
-
-if ((isset($_GET['language']) && $_GET['language'] == 'en') || !isset($_GET['language'])) {
-    $en_select = 'selected';
-    $language= 'en';
-} else {
-    $urdu_select = 'selected';
-    $language='urdu';
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,6 +66,7 @@ if ((isset($_GET['language']) && $_GET['language'] == 'en') || !isset($_GET['lan
   </div>
   </nav>
  <section id="profile"> 
+  
        <div class="suplliers">  
         <div class="card">
            <div class="card-header">
@@ -162,6 +148,7 @@ if ((isset($_GET['language']) && $_GET['language'] == 'en') || !isset($_GET['lan
                </div>
            </div> 
        </div>  
+    
        <div class="suplliers">  
         <div class="card">
            <div class="card-header">
