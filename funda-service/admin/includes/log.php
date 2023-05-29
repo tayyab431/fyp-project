@@ -18,7 +18,7 @@
               <p class="text-white-50 mb-5">Admin Management</p>
          <form action="" method="post">
               <div class="form-outline form-white mb-4">
-                <input type="email" name ="email" id="typeEmailX" class="form-control form-control-lg" required="required" />
+                <input type="email" name ="email" id="typeEmailX" class="form-control form-control-lg" autofill="off" required="required" />
                 <label class="form-label" for="typeEmailX">Email</label>
               </div>
 

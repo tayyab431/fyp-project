@@ -5,6 +5,7 @@ include('connection/register.php');
 $path = dirname(__FILE__);
 include($path . '/language/lang.php');
 include($path . '/language/language-code.php');
+include($path . '/session/session.php');
 
 
 ?>
@@ -102,7 +103,7 @@ include($path . '/language/language-code.php');
         </div>
         <div class="input-group">
           <label for="username"><?php echo $join_form[$language]['3']?></label>
-          <input type="text" placeholder="<?php echo $join_form[$language]['3']?>" name="username" id="username" required="required" />
+          <input type="text" placeholder="<?php echo $join_form[$language]['3']?>" name="user_name" id="username" required="required" />
         </div>
         <div class="input-group">
           <label for="position"><?php echo $join_form[$language]['4']?></label>
@@ -156,7 +157,7 @@ include($path . '/language/language-code.php');
       <div class="form-step">
         <div class="input-group">
           <label for="password"><?php echo $join_form[$language]['13']?></label>
-          <input type="password" placeholder="<?php echo $join_form[$language]['13']?>" name="password" id="password" required="required" />
+          <input type="password" placeholder="<?php echo $join_form[$language]['13']?>" name="user_password" id="password" required="required" />
         </div>
         <div class="input-group">
           <label for="confirmPassword"><?php echo $join_form[$language]['14']?></label>
@@ -231,7 +232,7 @@ if (isset($_POST['submit'])) {
   // Escape user inputs to prevent SQL injection
   $first_name = mysqli_real_escape_string($con, $_POST['f-name']);
   $last_name = mysqli_real_escape_string($con, $_POST['l-name']);
-  $username = mysqli_real_escape_string($con, $_POST['username']);
+  $username = mysqli_real_escape_string($con, $_POST['user_name']);
   $email_or_phone = mysqli_real_escape_string($con, $_POST['email']);
   $cnic = mysqli_real_escape_string($con, $_POST['cnic']);
   $languages = mysqli_real_escape_string($con, $_POST['language']);
@@ -240,7 +241,7 @@ if (isset($_POST['submit'])) {
   $registration_no = mysqli_real_escape_string($con, $_POST['number']);
   $link_account = mysqli_real_escape_string($con, $_POST['ID']);
   $acc_password = mysqli_real_escape_string($con, $_POST['fb_password']);
-  $password = mysqli_real_escape_string($con, $_POST['password']);
+  $password = mysqli_real_escape_string($con, $_POST['user_password']);
   $confi_password = mysqli_real_escape_string($con, $_POST['confirm-password']);
 
   // Check if username already exists in database

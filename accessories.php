@@ -116,7 +116,7 @@ include($path . '/language/language-code.php');
               <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
           </div>
           <div class="box">
-              <img src="images/a7.jpg">
+              <img src="images/photo-1609797623185-9a0d472c827f.jpg">
               <h3><?php echo $access_ries[$language]['14']?></h3>
               <p><?php echo $access_ries[$language]['15']?></p>
               <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>

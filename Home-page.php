@@ -75,8 +75,8 @@ include($path . '/language/language-code.php');
   </button>
   <ul class="dropdown-menu">
     <li class="dropdown-item">My profile</li>
-    <li class="dropdown-item">Catagories</li>
-    <li class="dropdown-item">log out</li>
+    <li class="dropdown-item">Settings</li>
+    <li class="dropdown-item"><a href="login.php">Log in</a></li>
   </ul>
 </div>
   </div>

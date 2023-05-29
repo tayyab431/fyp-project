@@ -1,11 +1,13 @@
 <?php
 include('include/connect.php');
 
+
 ?>
 <?php
 $path = dirname(__FILE__);
 include($path . '/language/lang.php');
 include($path . '/language/language-code.php');
+include($path . '/session/session.php');
 
 ?>
 
@@ -95,15 +97,15 @@ include($path . '/language/language-code.php');
   <h1 class="heading"></h1>
   <h1 class="heading"></h1>
 <form id="login" action="" method="post" enctype="multipart/form-data" class="input-group">
-    <input type="text"class="input-feild" placeholder="<?php echo $login_page[$language]['2']?>" required="required" name="user_name"/>
+    <input type="text" style="text-transform: none;" class="input-feild" placeholder="<?php echo $login_page[$language]['2']?>" required="required" name="user_name"/>
     <input type="password" class="input-feild" placeholder="<?php echo $login_page[$language]['3']?>" required="required" name="user_password"/>
     <input type="checkbox" class="checkbox"> <span class="span"><?php echo $login_page[$language]['4']?></span>
     <button type="submit" class="submit-btn" name="user_log" ><?php echo $login_page[$language]['0']?></button>
 </form>
 <form id="register" action="" method="post" class="input-group">
-    <input type="text"
+    <input type="text" style="text-transform: none;"
     class="input-feild" placeholder=" <?php echo $login_page[$language]['2']?>" required="required" name="user_name">
-    <input type="email" class="input-feild" placeholder="<?php echo $login_page[$language]['5']?>" required="required" name="user_email"/>
+    <input type="email" style="text-transform: none;" class="input-feild" placeholder="<?php echo $login_page[$language]['5']?>" required="required" name="user_email"/>
     <input type="password" class="input-feild" placeholder="<?php echo $login_page[$language]['3']?>" autocomplete="off" required="required" name="user_password"/>
     <input type="password" class="input-feild" placeholder="<?php echo $login_page[$language]['6']?>" required="required" name="confirm_password"/>
     <input type="checkbox" class="checkbox" required="required" name="checkbox"/> <span class="span"><?php echo $login_page[$language]['7']?></span>
