@@ -13,8 +13,7 @@ $top_nav = array(
 $home_start = array(
     'en' => array(
         'Clothing Barters', 
-        'A Platform that supports clothing suppliers in Pakistan 
-        without buying more expensive accounts and memberships.', 
+        'A Platform that supports clothing suppliers in Pakistan without buying more expensive accounts and memberships.Through this ideal forum, different vendors and clothing line owners in the world do contact with Pakistani clothing apparel suppliers', 
         'Get Start', 
         'Chat support', 
         'AI Support. How can I help you?',
@@ -33,8 +32,7 @@ $home_start = array(
     ),
     'urdu' => array(
         'Clothing Barters', 
-        'ایک پلیٹ فارم جو پاکستان میں کپڑے فراہم کرنے والوں کو سپورٹ کرتا ہے۔
-        زیادہ مہنگے اکاؤنٹس اور ممبرشپ خریدے بغیر۔', 
+        'ایک ایسا پلیٹ فارم جو زیادہ مہنگے اکاؤنٹس اور ممبرشپ خریدے بغیر پاکستان میں ملبوسات فراہم کرنے والوں کو سپورٹ کرتا ہے۔ اس مثالی فورم کے ذریعے، دنیا کے مختلف وینڈرز اور کپڑوں کی لائن کے مالکان اس ویب ایپلیکیشن کا استعمال کرتے ہوئے پاکستانی ملبوسات کے سپلائرز سے رابطہ کرتے ہیں۔', 
         'شروع کریں', 
         'چیٹ سپورٹ', 
         'اے آئی سپورٹ۔ میں آپ کی کیسے مدد کر سکتا ہوں؟',

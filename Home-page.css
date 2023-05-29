@@ -20,8 +20,7 @@ html{
 html::-webkit-scrollbar
 {
     width: .8rem;
-   
-    background-color: #fff;
+    background-color: var(--body-color);
 }
 html::-webkit-scrollbar-track
 {
@@ -29,8 +28,7 @@ html::-webkit-scrollbar-track
 }
 html::-webkit-scrollbar-thumb
 {
-    background-color: var(--text-color);
-    
+    background-color: var(--text-color); 
     border-radius: 5rem;
 } 
 /* ===== Colours ===== */
@@ -48,10 +46,15 @@ html::-webkit-scrollbar-thumb
     --btn: #1f1925;
     --about-bg:#13131a;
     --head:#010718;
-    --primary-color: rgb(11, 78, 179);
+    --primary-color: rgb(1, 22, 53);
     --grid: #1f1925;
     --diff:#ffffff;
     --access:#b5b6b0;
+    --primaryGradient: linear-gradient(93.12deg, #000000 0.52%, #55138b 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #55138b -2.14%, #121212 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(44, 8, 8, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #581B98;
 }
 body{
     height: 100vh;
@@ -61,7 +64,7 @@ body.dark{
     --body-color: #010103;
     --nav-color:#010103;
     --side-nav: #13131a;
-    --text-color: #CCC;
+    --text-color: #fff;
     --search-bar: #242526;
     --main-color:#d3ad7f;
     --black:#13131a;
@@ -75,25 +78,21 @@ body.dark{
     --access:#010103;
 }
 
-  
- 
-  
  #logo {
     display: none; /* Display the dark logo when in dark mode */
   }
   
    /*dropdown*/
    .dropdown {
+     
     position: relative;
-    left: 94px;
+    left: 95px;
     display: inline-block;
-  }
-  
+   }
   .dropdown-toggle {
-    background-color: var(--diff);
+    background-color: var(--nav-color);
     border: none;
     padding: 10px;
-    border-radius: 32px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -115,19 +114,19 @@ body.dark{
   .dropdown-icon {
     font-size: 13px;
     transform: translateY(-1px);
+    color: var(--btn);
   }
   
   .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 16px;
-    width: 87px;
-    background-color: var(--diff);
-    border: 1px solid var(--diff);
-    border-radius: 2px 57px 34px 35px;
+    width: 90px;
+    background-color: var(--body-color);
+     
     padding: 10px;
     display: none;
     z-index: 1;
+    color: var(--text-color);
   }
   
   .dropdown-menu.show {
@@ -135,15 +134,15 @@ body.dark{
   }
   
   .dropdown-item {
-    border-radius: 1px 31px 0px 12px;
+    border-bottom: 1px solid var(--btn);
     cursor: pointer;
     padding: 9px 0;
-    transition: background-color 0.3s;
+    transition: 0.3s;
   }
   
   .dropdown-item:hover {
-    background-color: var(--text-color);
     color: var(--body-color);
+    background-color: var(--text-color);
   }
   
   
@@ -160,7 +159,11 @@ nav{
     z-index: 100;
 }
 body.dark nav{
-    border: 1px solid var(--grid);
+    border-bottom: 1px solid var(--grid);
+    
+}
+body nav{
+    border-bottom: 1px solid var(--grid);
 }
 nav .nav-bar
 {
@@ -182,9 +185,12 @@ nav .nav-bar .sidebarOpen
     cursor: pointer;
     display: none;
 }
+ 
 .logo img
 {
     height: 6rem;
+    position: relative;
+    right: 95px;
 }
 .d-flex
 {
@@ -208,19 +214,20 @@ nav .nav-bar .sidebarOpen
 {
     position: relative;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 500;
     color:var(--text-color);
     text-decoration: none;
     padding: 10px ;
 }
 select#language {
-   
-    padding: 0.7rem 1.3rem;
+    padding: .7rem 1rem;
     border: 1px solid var(--border);
-    font-size: 1.3rem;
-    background: var(--btn);
-    color: var(--body-color);
-    cursor: pointer;
+    font-size:  1.7rem;
+    background:var(--btn);
+    color:var(--body-color);
+     cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
    
 }
  
@@ -487,6 +494,7 @@ body.dark .search-field i
     background:var(--btn);
     color:var(--body-color);
     cursor: pointer; 
+    font-weight: 500;
  }
  .btn:hover 
  {
@@ -504,14 +512,15 @@ body.dark .search-field i
  {
     font-size: 6rem;
     text-transform: uppercase;
-    background-color:var(--nav-color);
-     color: var(--text-color);
-     padding:.5rem .3rem;
+    color: var(--text-color);
+    background-color: var(--body-color);
+    padding:.5rem .3rem;
+
  }
  .home .content p{
-  font-size: 2rem;
-     font-weight: bolder;
-    color:var(--diff);
+   font-size: 2rem;
+     font-weight: 300;
+    color: #fff;
     line-height: 1.8;
     padding: 1rem 0;
  }
@@ -1694,13 +1703,7 @@ padding-right: 12px;
 
 
 /* chatbot code start */
-*, html {
-    --primaryGradient: linear-gradient(93.12deg, #000000 0.52%, #55138b 100%);
-    --secondaryGradient: linear-gradient(268.91deg, #55138b -2.14%, #121212 99.69%);
-    --primaryBoxShadow: 0px 10px 15px rgba(44, 8, 8, 0.1);
-    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
-    --primary: #581B98;
-}
+ 
 .container-a{
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
@@ -2002,3 +2005,6 @@ body{
     
       line-height: 14px;
     }
+ 
+ 
+    

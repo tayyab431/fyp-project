@@ -137,7 +137,7 @@ include($path . '/language/language-code.php');
                            <i class="fas fa-envelope"></i>
                            WahajAli23@gmail.com
                        </div>
-                        <button class="contact-me">Contact Me</button>
+                        <a href="msj.html"><button class="contact-me">Contact Me</button></a>
                        </div>
                    </div>
                  </div> 

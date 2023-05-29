@@ -44,16 +44,9 @@ include($path . '/language/language-code.php');
     <li><a href="index.php"><?php echo $top_nav[$language]['3']?></a></li>
     <li><a href="suppor-page.php"><?php echo $top_nav[$language]['4']?></a></li>
     <li><a href="funda-service/admin\includes\log.php"><?php echo $top_nav[$language]['5']?></a></li>
-    <li>
-        <select onchange="set_language()" name="lang" id="language">
-      
-
-       <option value="en" <?php echo $en_select ?>><?php echo $top_nav[$language]['7']?></option>
-    <option value="urdu" <?php echo $urdu_select ?>><?php echo $top_nav[$language]['8']?></option></select></li>
-    <li><a href="login.php"><?php echo $top_nav[$language]['9']?></a></li>
+    <li><a href="login.php"><?php echo $top_nav[$language]['9']?></a></li> 
     </ul>
     </div>
-    <a href="signup.php" class="btn"><?php echo $top_nav[$language]['10']?></a>
     <div class="darkLight-searchBox">
    <div class="dark-light">
     <i class='bx bx-moon moon'></i>
@@ -68,9 +61,11 @@ include($path . '/language/language-code.php');
         <input type="text" placeholder="<?php echo $top_nav[$language]['12']?>">
         <i class='bx bx-search'></i>
     </div>
-   
-
   </div>
+  <select onchange="set_language()" name="lang" id="language">
+   <option value="en" <?php echo $en_select ?>><?php echo $top_nav[$language]['7']?></option>
+   <option value="urdu" <?php echo $urdu_select ?>><?php echo $top_nav[$language]['8']?></option></select>
+  <a href="signup.php" class="btn"><?php echo $top_nav[$language]['10']?></a>
   <div class="dropdown">
   <button class="dropdown-toggle" type="button" id="dropdownMenuButton">
     <span class="dropdown-profile">
