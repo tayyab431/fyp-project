@@ -2,10 +2,7 @@
 $path = dirname(__FILE__);
 include($path . '/language/lang.php');
 include($path . '/language/language-code.php');
-
 ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +11,7 @@ include($path . '/language/language-code.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <title>Clothing barters</title>
+    <link rel="icon" href="images/WHITE-COLOR-LOGO.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Home-page.css">
     <link href="http://fonts.googleapis.com/css?family=KaushanScript|Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5c515fb3d0.js" crossorigin="anonymous"></script>
@@ -34,16 +32,15 @@ include($path . '/language/language-code.php');
     <div class="logo-toggle">
     <span class="logo navLogo"><a href="Home-page.php"><img id ="logo" src="images/WHITE-COLOR-LOGO.png" alt="light logo"></a></span>
     <span class="logo navLogo"><a href="Home-page.php"><img id ="dark-logo" src="images/BLACK-COLOR-LOGO.png" alt="light logo"></a></span>
- 
     <i class='bx bx-x siderbarClose'></i>
     </div>
     <ul class="nav-links">
-    <li><a href="Home-page.php"><?php echo $top_nav[$language]['0']?></a></li>
+    <li><a href="#!"><?php echo $top_nav[$language]['0']?></a></li>
     <li><a href="Aboutt.php"><?php echo $top_nav[$language]['1']?></a></li>
     <li><a href="accessories.php"><?php echo $top_nav[$language]['2']?></a></li>
     <li><a href="index.php"><?php echo $top_nav[$language]['3']?></a></li>
     <li><a href="suppor-page.php"><?php echo $top_nav[$language]['4']?></a></li>
-    <li><a href="funda-service/admin\includes\log.php"><?php echo $top_nav[$language]['5']?></a></li>
+    <!-- <li><a href="funda-service/admin\includes\log.php"></a></li> -->
     <li><a href="login.php"><?php echo $top_nav[$language]['9']?></a></li> 
     </ul>
     </div>
@@ -69,7 +66,7 @@ include($path . '/language/language-code.php');
   <div class="dropdown">
   <button class="dropdown-toggle" type="button" id="dropdownMenuButton">
     <span class="dropdown-profile">
-      <img src="housewife-browsing.jpg" alt="Profile Picture" class="profile-picture">
+      <img src="icons8-user-64 (1).png" alt="Profile Picture" class="profile-picture">
     </span>
     <span class="dropdown-icon">▼</span>
   </button>
@@ -91,13 +88,12 @@ include($path . '/language/language-code.php');
     <a href="#" class="btn"><?php echo $home_start[$language]['2']?></a>
     </div>
     <!-- chatbot code start -->
-
-    <div class="container-a">
+   <div class="container-a">
       <div class="chatbox">
           <div class="chatbox__support">
               <div class="chatbox__header">
                   <div class="chatbox__image--header">
-                      <img src="icons8-female-user-48.png" alt="image">
+                      <img src="icons8-chatbot-40.png" alt="image">
                   </div>
                   <div class="chatbox__content--header">
                       <h4 class="chatbox__heading--header"><?php echo $home_start[$language]['3']?></h4>
@@ -113,12 +109,11 @@ include($path . '/language/language-code.php');
               </div>
           </div>
           <div class="chatbox__button">
-              <button><img src="chatbox-icon.svg" alt="pic"></button>
+              <button><img src="icons8-chatbot-40.png" alt="pic"></button>
           </div>
       </div>
   </div>
-
-    <!-- chatbot code end here -->
+ <!-- chatbot code end here -->
 </section>
 <section class="about">
   <h1 class="heading"><?php echo $home_start[$language]['6']?></h1>
@@ -414,21 +409,5 @@ include($path . '/language/language-code.php');
     <script src="language/lang.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    
-
-
-  
 </body>
 </html>
-
-
- <!-- <script> -->
-  <!-- function set_language() {
-  var language = $('#language').val();
-  var currentUrl = window.location.href;
-  var baseUrl = currentUrl.split('?')[0];
-  var newUrl = baseUrl + '?language=' + language;
-  window.location.href = newUrl;
-}
-</script> -->

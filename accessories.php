@@ -11,6 +11,7 @@ include($path . '/language/language-code.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <title>Clothing barters</title>
+    <link rel="icon" href="images/WHITE-COLOR-LOGO.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Home-page.css">
     <link href="http://fonts.googleapis.com/css?family=KaushanScript|Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5c515fb3d0.js" crossorigin="anonymous"></script>
@@ -24,32 +25,26 @@ include($path . '/language/language-code.php');
   <!---Header-->
   <nav>
     <div class="nav-bar">
-    <i class='bx bx-menu sidebarOpen' ></i>
+    <i class='bx bx-menu sidebarOpen'></i>
     <span class="logo navLogo"><a href="Home-page.php"><img id ="logo" src="images/WHITE-COLOR-LOGO.png" alt="light logo"></a></span>
-    <span class="logo"><a href="Home-page.php"><img id ="dark-logo" src="images/BLACK-COLOR-LOGO.png" alt="light logo"></a></span>
+    <span class="logo navLogo"><a href="Home-page.php"><img id ="dark-logo" src="images/BLACK-COLOR-LOGO.png" alt="light logo"></a></span>
     <div class="menu">
     <div class="logo-toggle">
     <span class="logo navLogo"><a href="Home-page.php"><img id ="logo" src="images/WHITE-COLOR-LOGO.png" alt="light logo"></a></span>
-    <span class="logo"><a href="Home-page.php"><img id ="dark-logo" src="images/BLACK-COLOR-LOGO.png" alt="light logo"></a></span>
+    <span class="logo navLogo"><a href="Home-page.php"><img id ="dark-logo" src="images/BLACK-COLOR-LOGO.png" alt="light logo"></a></span>
+ 
     <i class='bx bx-x siderbarClose'></i>
     </div>
     <ul class="nav-links">
     <li><a href="Home-page.php"><?php echo $top_nav[$language]['0']?></a></li>
     <li><a href="Aboutt.php"><?php echo $top_nav[$language]['1']?></a></li>
-    <li><a href="accessories.php"><?php echo $top_nav[$language]['2']?></a></li>
+    <li><a href="#!"><?php echo $top_nav[$language]['2']?></a></li>
     <li><a href="index.php"><?php echo $top_nav[$language]['3']?></a></li>
     <li><a href="suppor-page.php"><?php echo $top_nav[$language]['4']?></a></li>
-    <li><a href="funda-service/admin\includes\log.php"><?php echo $top_nav[$language]['5']?></a></li>
-    <li>
-        <select onchange="set_language()" name="lang" id="language">
-      
-
-       <option value="en" <?php echo $en_select ?>><?php echo $top_nav[$language]['7']?></option>
-    <option value="urdu" <?php echo $urdu_select ?>><?php echo $top_nav[$language]['8']?></option></select></li>
-    <li><a href="login.php"><?php echo $top_nav[$language]['9']?></a></li>
+    <!-- <li><a href="funda-service/admin\includes\log.php"></a></li> -->
+    <li><a href="login.php"><?php echo $top_nav[$language]['9']?></a></li> 
     </ul>
     </div>
-    <a href="signup.php" class="btn"><?php echo $top_nav[$language]['10']?></a>
     <div class="darkLight-searchBox">
    <div class="dark-light">
     <i class='bx bx-moon moon'></i>
@@ -61,10 +56,27 @@ include($path . '/language/language-code.php');
        <i class='bx bx-search search'></i>
       </div>           
       <div class="search-field">
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="<?php echo $top_nav[$language]['12']?>">
         <i class='bx bx-search'></i>
     </div>
   </div>
+  <select onchange="set_language()" name="lang" id="language">
+   <option value="en" <?php echo $en_select ?>><?php echo $top_nav[$language]['7']?></option>
+   <option value="urdu" <?php echo $urdu_select ?>><?php echo $top_nav[$language]['8']?></option></select>
+  <a href="signup.php" class="btn"><?php echo $top_nav[$language]['10']?></a>
+  <div class="dropdown">
+  <button class="dropdown-toggle" type="button" id="dropdownMenuButton">
+    <span class="dropdown-profile">
+      <img src="icons8-user-64 (1).png" alt="Profile Picture" class="profile-picture">
+    </span>
+    <span class="dropdown-icon">▼</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li class="dropdown-item">My profile</li>
+    <li class="dropdown-item">Settings</li>
+    <li class="dropdown-item"><a href="login.php">Log in</a></li>
+  </ul>
+</div>
   </div>
   </div>
   </nav>

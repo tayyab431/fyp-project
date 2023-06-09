@@ -188,7 +188,7 @@ $login_page = array(
     'en' => array(
        'SIGN IN', 
         'SIGN UP',
-        'User Name', 
+        'Username', 
         'Enter Password', 
         'Remember Password',
         'Email ID',

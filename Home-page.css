@@ -54,11 +54,11 @@ html::-webkit-scrollbar-thumb
     --grid: #1f1925;
     --diff:#ffffff;
     --access:#b5b6b0;
-    --primaryGradient: linear-gradient(93.12deg, #000000 0.52%, #55138b 100%);
-    --secondaryGradient: linear-gradient(268.91deg, #55138b -2.14%, #121212 99.69%);
+    --primaryGradient: linear-gradient(93.12deg, #382f40 0.52%, #71657c 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #362f3d -2.14%, #423c3c 99.69%);
     --primaryBoxShadow: 0px 10px 15px rgba(44, 8, 8, 0.1);
     --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
-    --primary: #581B98;
+    --primary: #423c3c;
 }
 body{
     height: 100vh;
@@ -80,6 +80,11 @@ body.dark{
     --grid: rgba(255,255,255,.3);
     --diff:#d3ad7f;
     --access:#010103;
+    --primaryGradient: linear-gradient(93.12deg, #000000 0.52%, #19131d 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #33293b -2.14%, #000000 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(44, 8, 8, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #010103;
 }
 
  #logo {
@@ -226,6 +231,7 @@ nav .nav-bar .sidebarOpen
 select#language {
     padding: .7rem 1rem;
     border: 1px solid var(--border);
+    margin: 0px 20px;
     font-size:  1.7rem;
     background:var(--btn);
     color:var(--body-color);
@@ -1883,7 +1889,7 @@ padding-right: 12px;
 .chatbox__button button,
 .chatbox__button button:focus,
 .chatbox__button button:visited {
-    padding: 10px;
+    padding: 0px;
     background: var( --diff);
     border: none;
     outline: none;

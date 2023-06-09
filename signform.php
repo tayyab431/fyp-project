@@ -17,6 +17,7 @@ include($path . '/session/session.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clothing barters</title>
+    <link rel="icon" href="images/WHITE-COLOR-LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="sign.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link href="http://fonts.googleapis.com/css?family=KaushanScript|Poppins&display=swap" rel="stylesheet">
@@ -76,7 +77,7 @@ include($path . '/session/session.php');
   </div>
   </div>
   </nav>  
-    <form action="" method ="post" class="form">
+    <form action="join-sub.php" method ="post" class="form">
       <h1 class="text-center"><?php echo $join_form[$language]['0']?></h1>
       <!-- Progress bar -->
       <div class="progressbar">
@@ -221,89 +222,5 @@ include($path . '/session/session.php');
   </body>
 </html>
 
-<?php
-
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-
-if (isset($_POST['submit'])) {
-
-  // Escape user inputs to prevent SQL injection
-  $first_name = mysqli_real_escape_string($con, $_POST['f-name']);
-  $last_name = mysqli_real_escape_string($con, $_POST['l-name']);
-  $username = mysqli_real_escape_string($con, $_POST['user_name']);
-  $email_or_phone = mysqli_real_escape_string($con, $_POST['email']);
-  $cnic = mysqli_real_escape_string($con, $_POST['cnic']);
-  $languages = mysqli_real_escape_string($con, $_POST['language']);
-  $unit_name = mysqli_real_escape_string($con, $_POST['name']);
-  $unit_address = mysqli_real_escape_string($con, $_POST['address']);
-  $registration_no = mysqli_real_escape_string($con, $_POST['number']);
-  $link_account = mysqli_real_escape_string($con, $_POST['ID']);
-  $acc_password = mysqli_real_escape_string($con, $_POST['fb_password']);
-  $password = mysqli_real_escape_string($con, $_POST['user_password']);
-  $confi_password = mysqli_real_escape_string($con, $_POST['confirm-password']);
-
-  // Check if username already exists in database
-  $username_query = "SELECT * FROM manufacturers WHERE username='$username'";
-  $username_result = mysqli_query($con, $username_query);
-  if (mysqli_num_rows($username_result) > 0) {
-    // Username already exists
-    echo  "<script>alert('Username already exists')</script>" ;
-    echo "<script>window.location.href = 'signform.php';</script>";
-    
-    exit();
-  }
-
-  // Check if email or phone already exists in database
-  $email_query = "SELECT * FROM manufacturers WHERE email_or_phone='$email_or_phone'";
-  $email_result = mysqli_query($con, $email_query);
-  if (mysqli_num_rows($email_result) > 0) {
-    // Email or phone already exists
-    echo  "<script>alert('Email or phone already registered')</script>";
-    echo "<script>window.location.href = 'signform.php';</script>";
-    exit();
-  }
-
-  // Check if CNIC is valid
-  if (!preg_match('/^\d{5}-\d{7}-\d{1}$/', $cnic)) {
-    echo "<script>alert('CNIC is not valid')</script>";
-    echo "<script>window.location.href = 'signform.php';</script>";
-    exit();
-  }
-
-  // Check if unit name, unit address, registration number or linked account already exists in database
-  $check_query = "SELECT * FROM manufacturers WHERE unit_name='$unit_name' OR unit_address='$unit_address' OR registration_no='$registration_no' OR link_account='$link_account'";
-  $check_result = mysqli_query($con, $check_query);
-  if (mysqli_num_rows($check_result) > 0) {
-    // Unit name, unit address, registration number or linked account already exists
-    echo "<script>alert('unit name, address or registration already exist')</script>";
-    echo "<script>window.location.href = 'signform.php';</script>";
-    exit();
-  }
-
-  // Check if password and confirm password match
-  if ($password !== $confi_password) {
-    // Password and confirm password do not match
-    echo "<script>alert('password does not match')</script>";
-    echo "<script>window.location.href = 'signform.php';</script>";
-    exit();
-  }
-
-  // Insert user inputs into database table
-  $sql = "INSERT INTO manufacturers (first_name, last_name, username, email_or_phone, cnic, languages, unit_name, unit_address, registration_no, link_account, acc_password, password, conf_password) VALUES ('$first_name', '$last_name', '$username', '$email_or_phone', '$cnic', '$languages', '$unit_name', '$unit_address', '$registration_no', '$link_account', '$acc_password', '$password', '$confi_password')";
-
-  //
-
-  // Execute the query and check for errors
-  $sql_execute = mysqli_query($con, $sql);
-  if ($sql_execute) {
-echo "<script>alert('Data inserted successfully')</script>";
-echo "<script>window.location.href = 'signform.php';</script>";
-  } else {
-    die(mysqli_error($con));
-  }
-}
-?>
 
 
