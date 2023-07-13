@@ -49,7 +49,7 @@ include('nav.php');
                   </div>
               </div>
               <div class="img-side  img-w">
-                  <img src="..\images/413h2fkY11L._AC_UF1000_1000_QL80_-removebg-preview.png" alt="">
+                  <!-- <img src="..\images/h.jpg" alt=""> -->
               </div>
           </div>
       </div>
@@ -200,7 +200,7 @@ include('nav.php');
                   </div>
               </div>
               <div class="..\img-side img-side-m">
-                  <img src="images/clothes-1-removebg-preview__1_-removebg-preview.png" alt="">
+                  <img src="images/3.jpg" alt="">
               </div>
           </div>
       </div>

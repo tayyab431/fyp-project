@@ -15,8 +15,7 @@ include($path . '/language/language-code.php');
     <link rel="stylesheet" type="text/css" href="Home-page.css">
     <link href="http://fonts.googleapis.com/css?family=KaushanScript|Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5c515fb3d0.js" crossorigin="anonymous"></script>
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>   
-     
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>     
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -47,7 +46,7 @@ include($path . '/language/language-code.php');
     <div class="darkLight-searchBox">
    <div class="dark-light">
     <i class='bx bx-moon moon'></i>
-    <i class='bx bx-sun sun'></i>               
+    <i class='bx bx-sun sun'></i>              
     </div>
     <div class="searchBox">
       <div class="searchToggle">
@@ -81,7 +80,7 @@ include($path . '/language/language-code.php');
   </nav>
 <!--home start-->
 <section class="home" id="home">
-    <div class="content">
+    <div class="content"data-aos="fade-up">
     <h3><?php echo $home_start[$language]['0']?></h3>
     <p><?php echo $home_start[$language]['1']?>
     </p>
@@ -115,115 +114,12 @@ include($path . '/language/language-code.php');
   </div>
  <!-- chatbot code end here -->
 </section>
-<section class="about">
-  <h1 class="heading"><?php echo $home_start[$language]['6']?></h1>
-  <div class="row">
-      <div class="content">
-              <h1> <?php echo $home_start[$language]['7']?></h1>
-            <div class="feature-dsc">
-              <div class="f-icon">
-             <i class="fa fa-check-square-o"></i>
-              </div>
-              <div class="f-text">
-                <p><?php echo $home_start[$language]['8']?></p>
-            </div>
-            </div>
-            <h1> <?php echo $home_start[$language]['9']?></h1>
-            <div class="feature-dsc">
-              <div class="f-icon">
-             <i class="fa fa-check-square-o"></i>
-              </div>
-              <div class="f-text">
-                <p> <?php echo $home_start[$language]['10']?></p>
-            </div>
-            </div>
-            <h1><?php echo $home_start[$language]['11']?></h1>
-            <div class="feature-dsc">
-              <div class="f-icon">
-             <i class="fa fa-check-square-o"></i>
-              </div>
-              <div class="f-text">
-                <p><?php echo $home_start[$language]['12']?></p>
-            </div>
-            </div>
-            <h1> <?php echo $home_start[$language]['13']?></h1>
-            <div class="feature-dsc">
-              <div class="f-icon">
-             <i class="fa fa-check-square-o"></i>
-              </div>
-              <div class="f-text">
-                <p><?php echo $home_start[$language]['14']?> </p>
-            </div>
-            </div>
-      </div>
-      <div class="image">
-          <img src="images/73243.jpg">
-      </div>   
-  </div>
-  </section>
-<!--accessories start-->
-<section class="accessories" id="#accessories">
-    <h1 class="heading"><?php echo $access_ries[$language]['0']?></h1>
-    <div class="box-container" data-aos="zoom-in">
-        <div class="box">
-            <img src="images/a1.jpg">
-            <h3><?php echo $access_ries[$language]['1']?></h3>
-            <p><?php echo $access_ries[$language]['2']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box">
-            <img src="images/a5.webp">
-            <h3><?php echo $access_ries[$language]['4']?></h3>
-            <p><?php echo $access_ries[$language]['5']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box">
-            <img src="images/a3.jpg">
-            <h3><?php echo $access_ries[$language]['6']?></h3>
-            <p><?php echo $access_ries[$language]['7']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box">
-            <img src="images/a4.jpg">
-            <h3><?php echo $access_ries[$language]['8']?></h3>
-            <p><?php echo $access_ries[$language]['9']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        </div>
-        <h1 class="heading"></h1>
-        <div class="box-container" data-aos="fade-up"> 
-        <div class="box">
-            <img src="images/track-men.jpg">
-            <h3><?php echo $access_ries[$language]['10']?></h3>
-            <p><?php echo $access_ries[$language]['11']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box">
-            <img src="images/a6.webp">
-            <h3><?php echo $access_ries[$language]['12']?></h3>
-            <p><?php echo $access_ries[$language]['13']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box">
-            <img src="images/photo-1609797623185-9a0d472c827f.jpg">
-            <h3><?php echo $access_ries[$language]['14']?></h3>
-            <p><?php echo $access_ries[$language]['15']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box">
-            <img src="images/gym.jpg">
-            <h3><?php echo $access_ries[$language]['16']?></h3>
-            <p><?php echo $access_ries[$language]['17']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-    </div>
-</section>
- <!--about start-->
- <section class="about" id="About" data-aos="zoom-in">
+   <!--about start-->
+   <section class="about" id="About">
   <h1 class="heading"><?php echo $access_ries[$language]['18']?></h1>
-  <div class="row">
+  <div class="row" data-aos="zoom-in">
       <div class="image">
-          <img src="images/2.jpg">
+          <img src="images/135.jpg">
       </div>
       <div class="content">
           <h3><?php echo $access_ries[$language]['19']?></h3>
@@ -232,23 +128,137 @@ include($path . '/language/language-code.php');
               </div>
   </div>
   </section>
-  <!--slider start-->
+   <!--feature start-->
+<section class="about">
+  <h1 class="heading"><?php echo $home_start[$language]['6']?></h1>
+  <div class="row">
+      <div class="content">
+              <h1 data-aos="zoom-in" data-aos-delay="150"> <?php echo $home_start[$language]['7']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
+              <div class="f-icon">
+             <i class="fa fa-check-square-o"></i>
+              </div>
+              <div class="f-text">
+                <p><?php echo $home_start[$language]['8']?></p>
+            </div>
+            </div>
+            <h1  data-aos="zoom-in" data-aos-delay="150"> <?php echo $home_start[$language]['9']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
+              <div class="f-icon">
+             <i class="fa fa-check-square-o"></i>
+              </div>
+              <div class="f-text">
+                <p> <?php echo $home_start[$language]['10']?></p>
+            </div>
+            </div>
+            <h1  data-aos="zoom-in" data-aos-delay="150"><?php echo $home_start[$language]['11']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
+              <div class="f-icon">
+             <i class="fa fa-check-square-o"></i>
+              </div>
+              <div class="f-text">
+                <p><?php echo $home_start[$language]['12']?></p>
+            </div>
+            </div>
+            <h1 data-aos="zoom-in" data-aos-delay="150"> <?php echo $home_start[$language]['13']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
+              <div class="f-icon">
+             <i class="fa fa-check-square-o"></i>
+              </div>
+              <div class="f-text">
+                <p><?php echo $home_start[$language]['14']?> </p>
+            </div>
+            </div>
+      </div>
+      <div class="image"data-aos="fade-right">
+          <img src="images/pexels-rachel-claire-5865196.jpg">
+      </div>   
+  </div>
+  </section>
+ <!--bg img start--> 
+ <section class="home4" id="home4">
+    <div class="content">
+    <h3>Where imagination meets creativity</h3>
+    <p>Manufacturing Process Is A Harmonious Blend Of Tradition And
+     Innovation. We Honor The Heritage Of Craftsmanship, Embracing Time-Honored Techniques Passed Down Through Generations.
+    </p>
+    <a href="#" class="btn"><?php echo $home_start[$language]['2']?></a>
+    </div>
+</section>
+<!--accessories start-->
+<section class="accessories" id="#accessories">
+    <h1 class="heading"><?php echo $access_ries[$language]['0']?></h1>
+    <div class="box-container" data-aos="zoom-in">
+        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/acc1.jpg">
+            <h3><?php echo $access_ries[$language]['1']?></h3>
+            <p><?php echo $access_ries[$language]['2']?></p>
+            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>         
+        </div>
+        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/a5.webp"> 
+            <h3><?php echo $access_ries[$language]['4']?></h3>
+            <p><?php echo $access_ries[$language]['5']?></p>
+            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
+        </div>
+        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/pexels-mathias-reding-12532620.jpg">
+            <h3><?php echo $access_ries[$language]['6']?></h3>
+            <p><?php echo $access_ries[$language]['7']?></p>
+            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
+        </div>
+        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/acc4.jpg">
+            <h3><?php echo $access_ries[$language]['8']?></h3>
+            <p><?php echo $access_ries[$language]['9']?></p>
+            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
+        </div>
+        </div>
+        <h1 class="heading"></h1>
+        <div class="box-container" data-aos="fade-up"> 
+        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/track-men.jpg">
+            <h3><?php echo $access_ries[$language]['10']?></h3>
+            <p><?php echo $access_ries[$language]['11']?></p>
+            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
+        </div>
+        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/pexels-ja-kubislav-14585221.jpg">
+            <h3><?php echo $access_ries[$language]['12']?></h3>
+            <p><?php echo $access_ries[$language]['13']?></p>
+            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
+        </div>
+        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/max-titov-Pp6OwIz2-kg-unsplash.jpg"> 
+            <h3><?php echo $access_ries[$language]['14']?></h3>
+            <p><?php echo $access_ries[$language]['15']?></p>
+            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
+        </div>
+        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/gym.jpg">
+            <h3><?php echo $access_ries[$language]['16']?></h3>
+            <p><?php echo $access_ries[$language]['17']?></p>
+            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
+        </div>
+    </div>
+</section>
+  <!--video slider start-->
   <section>
 <div class="container">
   <div class="slide-container active">
       <div class="slide">
           <div class="content">
-              <h3> </h3>
-              <p> </p>   
+              <h3>Unleashing Manufacturing Potential</h3>
+              <p>We believe that our customers deserve nothing but the best, and that's why we meticulously inspect every detail to deliver exceptional clothing that embodies both style and durability. Step into a world of timeless elegance and modern sophistication with Clothing Barters."</p>   
           </div>
-          <video src="images/s4.mp4" muted autoplay loop></video>
+          <video src="images/video_20230316_133009_edit.mp4" muted autoplay loop></video>
       </div>
   </div>
   <div class="slide-container">
       <div class="slide">
           <div class="content">
-              <h3> </h3>
-              <p> </p>
+              <h3>Cutting-Edge Manufacturing Techniques</h3>
+              <p>Step into a world of timeless elegance and modern sophistication with Clothing Barters. Our commitment to impeccable craftsmanship is evident in every detail. We source the finest fabrics, employ innovative techniques, and embrace cutting-edge technologies to bring you clothing that exceeds your expectations</p>
           </div>
           <video src="images/s2.mp4" muted autoplay loop></video>
       </div>
@@ -256,8 +266,8 @@ include($path . '/language/language-code.php');
   <div class="slide-container">
       <div class="slide">
           <div class="content">
-              <h3> </h3>
-              <p> </p>
+              <h3>Unveiling the Manufacturing Art </h3>
+              <p> From the selection of eco-friendly materials to our ethical production practices, we prioritize minimizing our environmental footprint. Manufacturing process is a harmonious blend of tradition and innovation. </p>
           </div>
           <video src="images/s3.mp4" muted autoplay loop></video>
       </div>
@@ -265,8 +275,8 @@ include($path . '/language/language-code.php');
   <div class="slide-container">
       <div class="slide">
           <div class="content">
-              <h3> </h3>
-              <p></p>
+              <h3>Quality at Every Stitch </h3>
+              <p>Manufacturing process is a harmonious blend of tradition and innovation. We honor the heritage of craftsmanship, embracing time-honored techniques passed down through generations. Simultaneously, we push the boundaries of innovation, utilizing state-of-the-art machinery and processes to create clothing that is both classic and contemporary.</p>
           </div>
           <video src="images/s1.mp4" muted autoplay loop></video>
       </div>
@@ -274,8 +284,8 @@ include($path . '/language/language-code.php');
   <div class="slide-container">
       <div class="slide">
           <div class="content">
-              <h3> </h3>
-              <p> </p>
+              <h3>From Factory to Fashion </h3>
+              <p>Unleash your style with our exclusive collection.We believe that sustainability and responsible manufacturing go hand in hand. From the selection of eco-friendly materials to our ethical production practices, we prioritize minimizing our environmental footprint. </p>   
           </div>
           <video src="images/s5.mp4" muted autoplay loop></video>
       </div>
@@ -283,8 +293,8 @@ include($path . '/language/language-code.php');
   <div class="slide-container">
       <div class="slide">
           <div class="content">
-              <h3> </h3>
-              <p> </p>
+              <h3>Expertly Manufactured </h3>
+              <p> From the initial concept to the final stitch, our dedicated team of artisans pour their passion and skill into each garment, ensuring that you receive nothing but the finest quality.</p>
           </div>
           <video src="images/s6.mp4" muted autoplay loop></video>
       </div>
@@ -311,6 +321,39 @@ include($path . '/language/language-code.php');
       slides[index].classList.add('active');
   }
 </script>
+<section class="about" id="About">
+    <div class="row">
+        <div class="image">
+            <img src="images/pexels-viktoria-alipatova-4169370.jpg">
+            <div class="text">
+              <h3>From Factory to Fashion </h3>
+              <p>Unleash your style with our exclusive collection.We believe that sustainability and responsible manufacturing go hand in hand.</p>   
+          </div>
+        </div>
+        <div class="image">
+        <img src="images/browns-voguebus-browns-mar-21-story-inline-2.webp">
+        <div class="text">
+              <h3>Expertly Manufactured </h3>
+              <p> From the initial concept to the final stitch, our dedicated team of artisans pour their passion and skill into each garment</p>
+          </div>
+        </div>
+        <div class="image">
+            <img src="images/feature.jpg">
+            <div class="text">
+              <h3>Cutting-Edge Manufacturing Techniques</h3>
+              <p>Step into a world of timeless elegance and modern sophistication with Clothing Barters.</p>
+          </div>
+        </div>
+        <div class="image">
+        <img src="images/fea.jpg">
+        <div class="text">
+              <h3>Unleashing Manufacturing Potential</h3>
+              <p>We believe that our customers deserve nothing but the best, and that's why we meticulously inspect eve</p>
+              
+          </div>
+        </div>
+    </div>
+    </section>
 <!--reviews start-->
 <section class="review" id="#review"> 
     <h1 class="heading"><?php echo $review[$language]['0']?></h1>
@@ -353,6 +396,7 @@ include($path . '/language/language-code.php');
            </div>      
     </div>
 </section>
+
 <!--footer start-->
 <footer class="footer">
   <div class="container">

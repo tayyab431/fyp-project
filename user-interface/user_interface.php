@@ -2,12 +2,13 @@
 include('nav.php');
 ?>
 <!--home start-->
-<section class="home" id="home">
-    <div class="content">
-    <h3><?php echo $home_start[$language]['0']?></h3>
-    <p><?php echo $home_start[$language]['1']?>
-    </p>
-    <a href="#" class="btn"><?php echo $home_start[$language]['2']?></a>
+<section class="user-home" id="home">
+    <div class="content" data-aos="fade-up" data-aos-delay="100">
+  <h3>Welcome To CLothing Barters</h3>
+    <div class="search-container">
+            <input type="text" placeholder="what are you looking for">
+            <button type="submit">Search</button>
+        </div>
     </div>
     <!-- chatbot code start -->
 
@@ -39,12 +40,54 @@ include('nav.php');
 
     <!-- chatbot code end here -->
 </section>
-<section class="about">
+<div class="container-service">
+     <h1 class="heading"><span>Our</span>Services</h1>
+      <div class="row">
+        <div class="service">
+          <i class="fas fa-laptop-code"></i>
+          <h2>Chat-bot for instant response
+          </h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-mobile-alt"></i>
+          <h2>Count on 24/7 support
+          </h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-chart-pie"></i>
+          <h2>Get quality work done quickly
+          </h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+        </div>
+        <div class="service">
+        <i class="fa fa-check-square-o"></i>
+          <h2>Protected Payments, Every Time
+          </h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-id-badge"></i>
+          <h2>The Best For Every Budget
+          </h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+        </div>
+        <div class="service">
+          <i class="fas fa-network-wired"></i>
+          <h2>Quality work done quickly
+          </h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+        </div>
+        
+      </div>
+     </div> 
+     <section class="about">
   <h1 class="heading"><?php echo $home_start[$language]['6']?></h1>
   <div class="row">
       <div class="content">
-              <h1> <?php echo $home_start[$language]['7']?></h1>
-            <div class="feature-dsc">
+              <h1 data-aos="zoom-in" data-aos-delay="150"> <?php echo $home_start[$language]['7']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
               <div class="f-icon">
              <i class="fa fa-check-square-o"></i>
               </div>
@@ -52,8 +95,8 @@ include('nav.php');
                 <p><?php echo $home_start[$language]['8']?></p>
             </div>
             </div>
-            <h1> <?php echo $home_start[$language]['9']?></h1>
-            <div class="feature-dsc">
+            <h1  data-aos="zoom-in" data-aos-delay="150"> <?php echo $home_start[$language]['9']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
               <div class="f-icon">
              <i class="fa fa-check-square-o"></i>
               </div>
@@ -61,8 +104,8 @@ include('nav.php');
                 <p> <?php echo $home_start[$language]['10']?></p>
             </div>
             </div>
-            <h1><?php echo $home_start[$language]['11']?></h1>
-            <div class="feature-dsc">
+            <h1  data-aos="zoom-in" data-aos-delay="150"><?php echo $home_start[$language]['11']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
               <div class="f-icon">
              <i class="fa fa-check-square-o"></i>
               </div>
@@ -70,8 +113,8 @@ include('nav.php');
                 <p><?php echo $home_start[$language]['12']?></p>
             </div>
             </div>
-            <h1> <?php echo $home_start[$language]['13']?></h1>
-            <div class="feature-dsc">
+            <h1 data-aos="zoom-in" data-aos-delay="150"> <?php echo $home_start[$language]['13']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
               <div class="f-icon">
              <i class="fa fa-check-square-o"></i>
               </div>
@@ -80,8 +123,8 @@ include('nav.php');
             </div>
             </div>
       </div>
-      <div class="image">
-          <img src="../images/73243.jpg">
+      <div class="image"data-aos="fade-right">
+          <img src="../images/pexels-rachel-claire-5865196.jpg">
       </div>   
   </div>
   </section>
@@ -142,12 +185,46 @@ include('nav.php');
         </div>
     </div>
 </section>
- <!--about start-->
- <section class="about" id="About" data-aos="zoom-in">
+  
+<section class="about" id="About">
+    <div class="row">
+        <div class="image">
+            <img src="../images/pexels-viktoria-alipatova-4169370.jpg">
+            <div class="text">
+              <h3>From Factory to Fashion </h3>
+              <p>Unleash your style with our exclusive collection.We believe that sustainability and responsible manufacturing go hand in hand.</p>   
+          </div>
+        </div>
+        <div class="image">
+        <img src="../images/browns-voguebus-browns-mar-21-story-inline-2.webp">
+        <div class="text">
+              <h3>Expertly Manufactured </h3>
+              <p> From the initial concept to the final stitch, our dedicated team of artisans pour their passion and skill into each garment</p>
+          </div>
+        </div>
+        <div class="image">
+            <img src="../images/feature.jpg">
+            <div class="text">
+              <h3>Cutting-Edge Manufacturing Techniques</h3>
+              <p>Step into a world of timeless elegance and modern sophistication with Clothing Barters.</p>
+          </div>
+        </div>
+        <div class="image">
+        <img src="../images/fea.jpg">
+        <div class="text">
+              <h3>Unleashing Manufacturing Potential</h3>
+              <p>We believe that our customers deserve nothing but the best, and that's why we meticulously inspect eve</p>
+              
+          </div>
+        </div>
+    </div>
+    </section>
+   <!--about start-->
+   <section class="about" id="About">
   <h1 class="heading"><?php echo $access_ries[$language]['18']?></h1>
-  <div class="row">
+  <div class="row" data-aos="zoom-in">
       <div class="image">
-          <img src="../images/2.jpg">
+          <img src="../images/135.jpg">
       </div>
       <div class="content">
           <h3><?php echo $access_ries[$language]['19']?></h3>
@@ -156,85 +233,6 @@ include('nav.php');
               </div>
   </div>
   </section>
-  <!--slider start-->
-  <section>
-<div class="container">
-  <div class="slide-container active">
-      <div class="slide">
-          <div class="content">
-              <h3> </h3>
-              <p> </p>   
-          </div>
-          <video src="../images/s4.mp4" muted autoplay loop></video>
-      </div>
-  </div>
-  <div class="slide-container">
-      <div class="slide">
-          <div class="content">
-              <h3> </h3>
-              <p> </p>
-          </div>
-          <video src="../images/s2.mp4" muted autoplay loop></video>
-      </div>
-  </div>
-  <div class="slide-container">
-      <div class="slide">
-          <div class="content">
-              <h3> </h3>
-              <p> </p>
-          </div>
-          <video src="../images/s3.mp4" muted autoplay loop></video>
-      </div>
-  </div>
-  <div class="slide-container">
-      <div class="slide">
-          <div class="content">
-              <h3> </h3>
-              <p></p>
-          </div>
-          <video src="../images/s1.mp4" muted autoplay loop></video>
-      </div>
-  </div>
-  <div class="slide-container">
-      <div class="slide">
-          <div class="content">
-              <h3> </h3>
-              <p> </p>
-          </div>
-          <video src="../images/s5.mp4" muted autoplay loop></video>
-      </div>
-  </div>
-  <div class="slide-container">
-      <div class="slide">
-          <div class="content">
-              <h3> </h3>
-              <p> </p>
-          </div>
-          <video src="../images/s6.mp4" muted autoplay loop></video>
-      </div>
-  </div>
-  <div id="next" onclick="next()"> > </div>
-  <div id="prev" onclick="prev()"> <
-   </div>
-</div>
-</section>
-<!--video-slider js-->
-<script>
-  let slides = document.querySelectorAll('.slide-container');
-  let index = 0;
-  function next()
-  {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-  }
-  function prev()
-  {
-      slides[index].classList.remove('active');
-      index = (index - 1 + slides.length) % slides.length;
-      slides[index].classList.add('active');
-  }
-</script>
 <!--reviews start-->
 <section class="review" id="#review"> 
     <h1 class="heading"><?php echo $review[$language]['0']?></h1>
@@ -252,7 +250,7 @@ include('nav.php');
          <p><?php echo $review[$language]['2']?></p> 
          </div>
         <div class="box">
-          <img src="housewife-browsing.jpg" class="user">
+          <img src="../housewife-browsing.jpg" class="user">
                <h3><?php echo $review[$language]['3']?></h3>
                <div class="star">
                   <i class="fas fa-star"></i>
@@ -264,7 +262,7 @@ include('nav.php');
             <p> <?php echo $review[$language]['4']?> </p>
            </div>
            <div class="box">
-            <img src="housewife-browsing.jpg" class="user">
+            <img src="../housewife-browsing.jpg" class="user">
             <h3><?php echo $review[$language]['5']?></h3>
             <div class="star">
                <i class="fas fa-star"></i>

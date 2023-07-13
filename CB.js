@@ -126,3 +126,111 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+
+// card-slider js start
+document.addEventListener("DOMContentLoaded", () => {
+  // Variable declarations
+  const wrapper = document.querySelector(".wrapper"); // Container element for the carousel
+  const carousel = document.querySelector(".carousel"); // Carousel element
+  const arrowBtns = document.querySelectorAll(".wrapper i"); // Navigation arrow buttons
+  const firstCardWidth = carousel.querySelector(".card").offsetWidth; // Width of the first card in the carousel
+  const carouselChildrens = [...carousel.children]; // Array of carousel item elements
+
+  let isDragging = false, // Flag to track if the user is currently dragging the carousel
+    startX, // Starting X-coordinate of the mouse/touch position during dragging
+    startScrollLeft, // Initial scroll position of the carousel during dragging
+    timeoutId; // ID of the autoplay timeout
+
+  let cardPerview = Math.round(carousel.offsetWidth / firstCardWidth); // Number of cards visible in the carousel
+
+  // Clone and prepend the last cards to the beginning for infinite scrolling
+  carouselChildrens.slice(-cardPerview).reverse().forEach(card => {
+    carousel.prepend(card.cloneNode(true));
+  });
+
+  // Clone and append the first cards to the end for infinite scrolling
+  carouselChildrens.slice(0, cardPerview).forEach(card => {
+    carousel.append(card.cloneNode(true));
+  });
+
+  // Event listener for arrow button clicks
+  arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const scrollDistance = btn.id === "left" ? -firstCardWidth : firstCardWidth;
+      let targetScrollLeft = carousel.scrollLeft + scrollDistance;
+  
+      if (targetScrollLeft < 0) {
+        targetScrollLeft = 0;
+      } else if (targetScrollLeft > (carousel.scrollWidth - carousel.offsetWidth)) {
+        targetScrollLeft = carousel.scrollWidth - carousel.offsetWidth;
+      }
+  
+      const scrollOptions = {
+        left: targetScrollLeft,
+        top: 0,
+        behavior: "smooth"
+      };
+  
+      carousel.scrollTo(scrollOptions);
+    });
+  });
+  
+
+
+  // Event handler for drag start
+  const dragStart = (e) => {
+    e.preventDefault();
+    isDragging = true;
+    carousel.classList.add("dragging");
+    startX = e.touches ? e.touches[0].pageX : e.pageX;
+    startScrollLeft = carousel.scrollLeft;
+  };
+
+  // Event handler for dragging
+  const dragging = (e) => {
+    if (!isDragging) return;
+    carousel.scrollLeft = startScrollLeft - (e.touches ? e.touches[0].pageX : e.pageX - startX);
+  };
+
+  // Event handler for drag stop
+  const dragStop = () => {
+    isDragging = false;
+    carousel.classList.remove("dragging");
+  };
+
+  // Autoplay function
+  const autoPlay = () => {
+    if (window.innerWidth < 800) return;
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 1500);
+  };
+  autoPlay();
+
+  // Function for infinite scrolling
+  const infiniteScroll = () => {
+    if (carousel.scrollLeft === 0) {
+      carousel.classList.add("no-transition");
+      carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+      carousel.classList.remove("no-transition");
+    } else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+      carousel.classList.add("no-transition");
+      carousel.scrollLeft = carousel.offsetWidth;
+      carousel.classList.remove("no-transition");
+    }
+    clearTimeout(timeoutId);
+    if (!wrapper.matches(":hover")) autoPlay();
+  };
+
+  // Event listeners
+  carousel.addEventListener("mousedown", dragStart);
+  carousel.addEventListener("touchstart", dragStart);
+  carousel.addEventListener("mousemove", dragging);
+  carousel.addEventListener("touchmove", dragging);
+  document.addEventListener("mouseup", dragStop);
+  document.addEventListener("touchend", dragStop);
+  carousel.addEventListener("scroll", infiniteScroll);
+  wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+  wrapper.addEventListener("mouseleave", autoPlay);
+});
+
