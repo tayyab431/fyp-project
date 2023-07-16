@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 // Database connection details
-$host = '172.17.0.2';
+$host = '172.18.0.2';
 $db = 'clothdatabase';
 $user = 'root';
 $password = '786110';

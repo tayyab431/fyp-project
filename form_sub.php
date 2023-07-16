@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 // Database connection details
 session_start();
 
-$host = '127.0.0.1';
+$host = '172.18.0.2';
 $db = 'clothdatabase';
 $user = 'root';
 $password = '786110';

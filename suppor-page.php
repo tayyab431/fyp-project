@@ -94,39 +94,37 @@ include($path . '/language/language-code.php');
                             <div class="text-center mg-text"> 
                                 <span class="mg-text"><?php echo $review[$language]['9']?></span>
                              </div> 
-                            </div> 
-                        </div> 
-                        <div class="col-md-2"> 
-                            <div class="card-inner p-3 d-flex flex-column align-items-center"> 
-                                <img src="https://i.imgur.com/ueLEPGq.png" width="50">
-                                 <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['10']?></span> 
-                                </div> </div> </div> <div class="col-md-2"> 
-                                    <div class="card-inner p-3 d-flex flex-column align-items-center"> 
-                                        <img src="https://i.imgur.com/tmqv0Eq.png" width="50">
-                                         <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['11']?></span>
-                                         </div> </div> </div> <div class="col-md-2"> 
-                                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/D0Sm15i.png" width="50"> <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['12']?></span> </div> </div> </div> <div class="col-md-2"> 
-                                                <div class="card-inner p-3 d-flex flex-column align-items-center"> 
-                                                    <img src="https://i.imgur.com/Z7BJ8Po.png" width="50"> 
-                                                    <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['13']?></span> 
-                                                </div> </div> </div> <div class="col-md-2">
-                                                     <div class="card-inner p-3 d-flex flex-column align-items-center"> 
-                                                        <img src="https://i.imgur.com/YLsQrn3.png" width="50"> 
-                                                        <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['14']?></span>
-         </div> 
-        </div> 
-      </div> 
+                    </div> 
+                </div> 
+                <div class="col-md-2"> 
+                <div class="card-inner p-3 d-flex flex-column align-items-center"> 
+            <img src="https://i.imgur.com/ueLEPGq.png" width="50">
+             <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['10']?></span> 
+            </div> </div> </div> <div class="col-md-2"> 
+           <div class="card-inner p-3 d-flex flex-column align-items-center"> 
+               <img src="https://i.imgur.com/tmqv0Eq.png" width="50">
+                <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['11']?></span>
+                </div> </div> </div> <div class="col-md-2"> 
+            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/D0Sm15i.png" width="50"> <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['12']?></span> </div> </div> </div> <div class="col-md-2"> 
+                <div class="card-inner p-3 d-flex flex-column align-items-center"> 
+                    <img src="https://i.imgur.com/Z7BJ8Po.png" width="50"> 
+                    <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['13']?></span> 
+                </div> </div> </div>    <a href="contact-page/con.html">
+    <div class="col-md-2">
+        <div class="card-inner p-3 d-flex flex-column align-items-center">
+            <img src="https://i.imgur.com/YLsQrn3.png" width="50">
+            <div class="text-center mg-text">
+                <span class="mg-text"><?php echo $review[$language]['14']; ?></span>
+            </div>
+        </div>
+    </div>
+</a>
      </div> 
     </div> 
    </div> 
   </div>
  </div>
-
-
-
-
-
-  <!--footer start-->
+ <!--footer start-->
 <footer class="footer">
   <div class="container">
     <div class="row">

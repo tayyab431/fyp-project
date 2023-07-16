@@ -31,11 +31,18 @@ include('nav.php');
                       <div class="card-inner p-3 d-flex flex-column align-items-center"> 
                    <img src="https://i.imgur.com/Z7BJ8Po.png" width="50"> 
                    <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['13']?></span> 
-                            </div> </div> </div> <div class="col-md-2">
-                                 <div class="card-inner p-3 d-flex flex-column align-items-center"> 
-                                    <img src="https://i.imgur.com/YLsQrn3.png" width="50"> 
-                  <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['14']?></span>
-         </div> 
+                            </div> </div> </div> 
+    <a href="contact-page/con.html">
+    <div class="col-md-2">
+        <div class="card-inner p-3 d-flex flex-column align-items-center">
+            <img src="https://i.imgur.com/YLsQrn3.png" width="50">
+            <div class="text-center mg-text">
+                <span class="mg-text"><?php echo $review[$language]['14']; ?></span>
+            </div>
+        </div>
+    </div>
+</a>
+
         </div> 
       </div> 
      </div> 

@@ -73,7 +73,7 @@ include('nav.php');
                            <i class="fas fa-envelope"></i>
                            WahajAli23@gmail.com
                        </div>
-                       <button class="contact-me"> <a href="msj.html">Contact Me</a></button>
+                       <button onclick="redirectToLocalhost()"  class="contact-me"> <a href="#">Contact Me</a></button>
                        </div>
                    </div>
                  </div> 
@@ -897,6 +897,12 @@ include('nav.php');
        </div>  
 </section>  
 <script src="..\manu.js"></script>
+<script>
+function redirectToLocalhost() {
+  var url = window.location.protocol + '//' + window.location.hostname + ':3002';
+  window.location.href = url;
+}
+</script>
 <?php
 include('footer.php');
 ?>

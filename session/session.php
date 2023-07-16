@@ -11,7 +11,7 @@ if (!isset($_SESSION['started'])) {
 
 
 // Database connection details
-$host = '172.17.0.2';
+$host = '172.18.0.2';
 $db = 'clothdatabase';
 $user = 'root';
 $password = '786110';

@@ -144,7 +144,7 @@ $review = array(
         'Delivery',
         'Product',
         'Return',
-        'Guarantee'
+        'Feed back'
        
     ),
     'urdu' => array(

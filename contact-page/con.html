@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing barters</title>
+    <link rel="icon" href="..\images/WHITE-COLOR-LOGO.png" type="image/x-icon">
+    <link rel="stylesheet" href="con.css">
+    <link rel="stylesheet" href="res.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("MNcQ0wo2JjFw3Mvz3");
+        })();
+    </script>
+</head>
+<body>
+    <div class="arch_contact_us_duplicate">
+        <div class="responsive-container-block big-container">
+            <div class="responsive-container-block container">
+                <div class="responsive-cell-block wk-mobile-12 wk-desk-5 wk-tab-10 wk-ipadp-5" id="ih6s">
+                    <p class="text-blk section-head">
+                        Get in touch with Clothing Barters
+                    </p>
+                    <p class="text-blk section-subhead">
+                       Feel free to ask anything, lets us know your exerperience..
+                    </p>
+                </div>
+                <div class="responsive-cell-block wk-ipadp-6 wk-mobile-12 wk-desk-5 wk-tab-9" id="i6df">
+                    <form id="contactForm">
+                        <div class="form-wrapper">
+                            <input class="input input-element" id="name" name="name" placeholder="Name">
+                            <input class="input input-element" id="email" name="email" placeholder="Email">
+                            <input class="input input-element" id="subject" name="subject" placeholder="Subject">
+                            <textarea class="textinput input-element" id="message" name="message" placeholder="Message"></textarea>
+                            <button type="submit" class="button">Send</button>
+                        </div>
+                        <div class="social-media-icon-container">
+                            <!-- Social media icons here -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function(){
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+  
+                // Get user inputs
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var subject = document.getElementById('subject').value;
+                var message = document.getElementById('message').value;
+  
+                // Prepare email template parameters
+                var templateParams = {
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message
+                };
+  
+                // Send email using EmailJS
+                emailjs.send('service_dyz5cyc', 'template_riscrtn', templateParams)
+                    .then(function(response) {
+                        alert('Email sent successfully! Our support team will contact you soon.');
+                        console.log('Email sent successfully!', response.status, response.text);
+  
+                        document.getElementById('contactForm').reset();
+                    }, function(error) {
+                        console.error('Error sending email:', error);
+                    });
+            });
+        })();
+    </script>
+</body>
+</html>
