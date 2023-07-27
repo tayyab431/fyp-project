@@ -44,7 +44,7 @@ html::-webkit-scrollbar-thumb
     --search-bar: #F2F2F2;
     --search-text: #010718;
     --main-color:#d3ad7f;
-    --btn:linear-gradient(rgba(0, 0, 0, 0.8),#d3ad7f);
+    --btn:linear-gradient(rgba(207, 164, 164, 0.8),#d3ad7f);
     --black:#13131a;
     --bg:#010103;
     --border:#1f1925;
@@ -71,7 +71,7 @@ body.dark{
     --black:#13131a;
     --bg:#010103;
     --border:#d3ad7f;
-    --btn:linear-gradient(rgba(0, 0, 0, 0.8),#d3ad7f);
+    --btn:linear-gradient(rgba(194, 145, 145, 0.8),#d3ad7f);
     --grid: rgba(255,255,255,.3);
     --diff:#13131a;
     --primaryGradient: linear-gradient(93.12deg, #000000 0.52%, #19131d 100%);

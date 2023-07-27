@@ -1,0 +1,152 @@
+body{
+    background: #55422c;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+  }
+  .container{
+    width: 45%;
+    margin: 50px auto; 
+    padding-bottom: 30px;
+
+  }
+  header{
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 50px 0;
+  }
+  header>span{
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .in-container{
+    width: 100%;
+    margin: 40px 0;
+    color: #f6f6f6;
+  }
+  h2{
+    font-weight: 400;
+    color: #D3AD7F;
+    border-bottom: 1px solid #aa885f;
+    border-width: 2px;
+    margin: 20px 50px;
+    padding: 10px;
+    text-align: center;
+  }
+  .row{
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+    display: table;
+  }
+  .top{
+    margin: -66px 16px;
+    display: block;
+   
+  }
+  .top button{
+    background: #D3AD7F;
+    font-size: 18px;
+    padding: 12px ;
+    border: 2px solid #D3AD7F;
+    border-radius: 5px;
+    width: 32%;
+  }
+   button:focus {
+    color: #D3AD7F;
+  }
+  .top:hover{
+    background: transparent;
+
+    color: #D3AD7F;
+    cursor: pointer;
+  }
+  .col2{
+    display: table;
+    width: 47%;
+    float: left;
+  }
+  .col2:nth-child(2){
+    display: table;
+    float: right;
+  }
+  label{
+    line-height: 35px;
+    display: table-header-group;
+    letter-spacing: 0.9px;
+    transition: all 0.3s ease;
+  }
+  input{
+    width: 100%;
+    display: table-row-group;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background: transparent;
+    color: black;
+    font-size: 1rem;
+  }
+  button:hover{
+    background: transparent;
+    border: 2px solid #D3AD7F;
+    color: #D3AD7F;
+    cursor: pointer;
+  }
+ 
+  input:focus{
+    outline: none !important;
+    border-color: #D3AD7F;
+  }
+  input:focus + label{
+    color: #D3AD7F;
+  }
+  input[type="submit"]{
+  
+    width: 30%;
+    float: right;
+     background: #D3AD7F;
+    border: 0;
+    
+  }
+  input[type="submit"]:hover{
+    background: transparent;
+    border: 2px solid #D3AD7F;
+    color: #D3AD7F;
+    cursor: pointer;
+  }
+
+  .textarea{
+    width: 100%;
+    display: table-row-group;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background: transparent;
+    color: #f6f6f6;
+    font-size: 1rem;
+  }
+  .textarea:focus{
+    outline: none !important;
+    border-color: #D3AD7F;
+  }
+  .textarea:focus ~ label{
+    color: #D3AD7F;
+  }
+  .back-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    padding: 10px;
+    color: #000; /* Change the color of the icon if needed */
+    text-decoration: none;
+  }
+  
+  .back-icon img {
+    width: 24px;
+    height: 24px;
+  }

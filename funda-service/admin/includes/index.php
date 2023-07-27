@@ -1,9 +1,46 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
   $path = dirname(__FILE__);
   include($path.'/header.php');
   include($path.'/top-nav.php');
   include($path.'/sidebar.php');
+  
+  $con=mysqli_connect('172.18.0.2','root','786110','clothdatabase');
+if($con){
+    echo "connected success";
+}
+else{
+die(mysqli_error($con));}
+// Initialize variables
+$userCount = 0;
+$supplierCount = 0;
+
+// Fetch user registration count
+$userQuery = "SELECT COUNT(*) AS total_users FROM panel_users";
+$userResult = mysqli_query($con, $userQuery);
+if ($userResult) {
+  $userData = mysqli_fetch_assoc($userResult);
+  $userCount = $userData['total_users'];
+} else {
+  // Handle database query error
+  echo "Error fetching user count: " . mysqli_error($con);
+}
+
+// Fetch supplier registration count
+$supplierQuery = "SELECT COUNT(*) AS total_suppliers FROM manufacturers";
+$supplierResult = mysqli_query($con, $supplierQuery);
+if ($supplierResult) {
+  $supplierData = mysqli_fetch_assoc($supplierResult);
+  $supplierCount = $supplierData['total_suppliers'];
+} else {
+  // Handle database query error
+  echo "Error fetching supplier count: " . mysqli_error($con);
+}
+ 
 ?>
+
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -47,12 +84,12 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3><?php echo $supplierCount; ?></h3>
 
-                <p>Bounce Rate</p>
+                <p>suppier Registrations</p>
               </div>
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="ion ion-person-add"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -62,7 +99,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+              <h3><?php echo $userCount; ?></h3>
 
                 <p>User Registrations</p>
               </div>
@@ -94,7 +131,9 @@
     </section>
     <!-- /.content -->
     </div>
+    
 <?php
+
   include($path.'/footer.php');?>
   <?php include($path.'/script.php');?>
 

@@ -79,51 +79,137 @@ include($path . '/language/language-code.php');
   </div>
   </div>
   </nav>
-  <!-- main content -->
-  <div class="container mt-4"> <div class="row d-flex justify-content-center"> 
-    <div class="col-md-9"> 
-        <div class="card-a p-4 mt-3"> 
-            <h3 class="heading mt-5 text-center"><?php echo $review[$language]['7']?></h3> 
-            <div class="d-flex justify-content-center px-5"> 
-                <div class="search">
-                     <input type="text" class="search-input" placeholder="<?php echo $review[$language]['8']?>" name=""> <a href="#" class="search-icon"> <i class="fa fa-search"></i> </a> </div>
-                     </div> 
-                     <div class="row mt-4 g-1 px-4 mb-5"> 
-                        <div class="col-md-2"> 
-                            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/Mb8kaPV.png" width="50"> 
-                            <div class="text-center mg-text"> 
-                                <span class="mg-text"><?php echo $review[$language]['9']?></span>
-                             </div> 
-                    </div> 
-                </div> 
-                <div class="col-md-2"> 
-                <div class="card-inner p-3 d-flex flex-column align-items-center"> 
-            <img src="https://i.imgur.com/ueLEPGq.png" width="50">
-             <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['10']?></span> 
-            </div> </div> </div> <div class="col-md-2"> 
-           <div class="card-inner p-3 d-flex flex-column align-items-center"> 
-               <img src="https://i.imgur.com/tmqv0Eq.png" width="50">
-                <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['11']?></span>
-                </div> </div> </div> <div class="col-md-2"> 
-            <div class="card-inner p-3 d-flex flex-column align-items-center"> <img src="https://i.imgur.com/D0Sm15i.png" width="50"> <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['12']?></span> </div> </div> </div> <div class="col-md-2"> 
-                <div class="card-inner p-3 d-flex flex-column align-items-center"> 
-                    <img src="https://i.imgur.com/Z7BJ8Po.png" width="50"> 
-                    <div class="text-center mg-text"> <span class="mg-text"><?php echo $review[$language]['13']?></span> 
-                </div> </div> </div>    <a href="contact-page/con.html">
-    <div class="col-md-2">
-        <div class="card-inner p-3 d-flex flex-column align-items-center">
-            <img src="https://i.imgur.com/YLsQrn3.png" width="50">
-            <div class="text-center mg-text">
-                <span class="mg-text"><?php echo $review[$language]['14']; ?></span>
-            </div>
+ <!-- main content -->
+<div class="container mt-4">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-9">
+      <div class="card-a p-4 mt-3">
+        <h3 class="heading mt-5 text-center"><?php echo $review[$language]['7']?></h3>
+        <div class="d-flex justify-content-center px-5">
+          <div class="search">
+            <input type="text" id="searchInput" class="search-input" placeholder="<?php echo $review[$language]['8']?>" name="">
+            <a href="#" class="search-icon">
+              <i class="fa fa-search"></i>
+            </a>
+          </div>
         </div>
+        <div class="row mt-4 g-1 px-4 mb-5" id="supportOptions"> <!-- Removed duplicate ID -->
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center">
+            <img src="sup-icon/icons8-account-60.png" width="50">
+              <div class="text-center mg-text">
+                <span class="mg-text"><?php echo $review[$language]['9']?></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center">
+            <img src="sup-icon/icons8-payment-60.png" width="50">
+              <div class="text-center mg-text">
+                <span class="mg-text"><?php echo $review[$language]['10']?></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center">
+            <img src="sup-icon/icons8-vehicle-60.png" width="50">
+              <div class="text-center mg-text">
+                <span class="mg-text"><?php echo $review[$language]['11']?></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center">
+            <img src="sup-icon/icons8-product-64.png" width="50">
+              <div class="text-center mg-text">
+                <span class="mg-text"><?php echo $review[$language]['12']?></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-inner p-3 d-flex flex-column align-items-center">
+            <img src="sup-icon/icons8-clock-60.png" width="50">
+              <div class="text-center mg-text">
+                <span class="mg-text"><?php echo $review[$language]['13']?></span>
+              </div>
+            </div>
+          </div>
+          <a href="contact-page/con.html">
+            <div class="col-md-2">
+              <div class="card-inner p-3 d-flex flex-column align-items-center">
+              <img src="sup-icon/icons8-clipboard-60.png" width="50">
+                <div class="text-center mg-text">
+                  <span class="mg-text"><?php echo $review[$language]['14']; ?></span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <!-- Add more support divs as needed... -->
+        </div>
+      </div>
     </div>
-</a>
-     </div> 
-    </div> 
-   </div> 
   </div>
- </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="container">
+      <p id="modalContent"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Include necessary CSS styles -->
+<style>
+  #supportOptions > div {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 630px;
+  }
+  p#modalContent {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: monospace;
+    line-height: 22px;
+}
+
+  .close {
+    color: red;
+    margin: -10px;
+    float: right;
+    font-size: 37px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+
+
+
+
+
  <!--footer start-->
 <footer class="footer">
   <div class="container">
@@ -169,7 +255,69 @@ include($path . '/language/language-code.php');
   </div>
 </footer>
   
-    
+    <!-- Include this script tag after the HTML -->
+<script>
+    // Function to close the modal
+    function closeModal() {
+      const modal = document.getElementById("myModal");
+      modal.style.display = "none";
+    }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    const supportOptions = document.getElementById("supportOptions").children;
+
+    searchInput.addEventListener("input", function () {
+      const query = searchInput.value.trim().toLowerCase();
+
+      // Loop through each support option and show/hide based on the search query
+      for (const option of supportOptions) {
+        const optionText = option.textContent.toLowerCase();
+        if (optionText.includes(query)) {
+          option.style.display = "block";
+        } else {
+          option.style.display = "none";
+        }
+      }
+    });
+
+    // Function to open the modal
+    function openModal(content) {
+      const modalContent = document.getElementById("modalContent");
+      modalContent.textContent = content;
+      const modal = document.getElementById("myModal");
+      modal.style.display = "block";
+    }
+
+  
+    // Add click event listeners to the support divs
+    const accountDiv = document.querySelector(".col-md-2:nth-child(1)");
+    const paymentDiv = document.querySelector(".col-md-2:nth-child(2)");
+    const deliveryDiv = document.querySelector(".col-md-2:nth-child(3)");
+    const productDiv = document.querySelector(".col-md-2:nth-child(4)");
+    const returnDiv = document.querySelector(".col-md-2:nth-child(5)");
+
+    accountDiv.addEventListener("click", function () {
+      openModal("Please login to report any account related issue.");
+    });
+
+    paymentDiv.addEventListener("click", function () {
+      openModal("Please login to report payment issue.");
+    });
+
+    deliveryDiv.addEventListener("click", function () {
+      openModal("Please login to track your order.");
+    });
+
+    productDiv.addEventListener("click", function () {
+      openModal("Please login to register product related issue");
+    });
+
+    returnDiv.addEventListener("click", function () {
+      openModal("Please login to return your order");
+    });
+  });
+</script>
     
     <script src="CB.js"></script>
     <script>

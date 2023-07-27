@@ -41,6 +41,14 @@ if (isset($_POST['user_register'])) {
   // Remove spaces from username
   $user_username = str_replace(' ', '', $user_username);
 
+  // Validate email format
+if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
+  echo "<script>alert('Invalid email format.')</script>";
+  echo "<script>window.location.href = 'login.php';</script>";
+  exit();
+}
+
+
   // Select query using PDO prepared statement
   $select_query = "SELECT * FROM user_table WHERE username = :username OR user_email = :email";
   $stmt = $con->prepare($select_query);
@@ -69,6 +77,7 @@ if (isset($_POST['user_register'])) {
     }
   }
 }
+
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

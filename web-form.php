@@ -18,6 +18,19 @@ try {
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
+function has_valid_tld($email)
+{
+    $tld_list = array("com", "net", "org", "edu", "yahoo"); // Add more valid TLDs if needed
+    $domain = explode("@", $email)[1];
+    $tld = explode(".", $domain)[1];
+    return in_array($tld, $tld_list);
+}
+
+function has_valid_domain_dns($email)
+{
+    $domain = explode("@", $email)[1];
+    return (checkdnsrr($domain, "MX") || getmxrr($domain, $mx_records));
+}
 
 if (isset($_POST['user_register'])) {
     $user_username = $_POST['user_name'];
@@ -30,12 +43,37 @@ if (isset($_POST['user_register'])) {
     $user_email = filter_var($_POST['user_email'], FILTER_SANITIZE_EMAIL);
     // ... repeat the same for other inputs if needed
 
-    // Validate username format
-    if (!preg_match('/^[a-zA-Z0-9]+$/', $user_username)) {
-        echo "<script>alert('Invalid username format. Username should only contain alphanumeric characters.')</script>";
+    // Validate username format and minimum length
+    if (strlen($user_username) < 8 || !preg_match('/^[a-zA-Z0-9]+$/', $user_username)) {
+        echo "<script>alert('Username should be at least 8 characters and only contain alphanumeric characters.')</script>";
         echo "<script>window.location.href = 'login.php';</script>";
         exit();
     }
+
+        // Validate email format ("ali12@gmail.com" or "ali12@example.com" and similar formats)
+    if (!preg_match('/^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/i', $user_email)) {
+        echo "<script>alert('Invalid email format.')</script>";
+        echo "<script>window.location.href = 'login.php';</script>";
+        exit();
+    }
+
+    // Additional validation: Check if the TLD is valid
+    if (!has_valid_tld($user_email)) {
+        echo "<script>alert('Invalid TLD (Top-Level Domain) for the email.')</script>";
+        echo "<script>window.location.href = 'login.php';</script>";
+        exit();
+    }
+
+    // Additional validation: Check if the domain has valid DNS records
+    if (!has_valid_domain_dns($user_email)) {
+        echo "<script>alert('Invalid domain DNS records for the email.')</script>";
+        echo "<script>window.location.href = 'login.php';</script>";
+        exit();
+    }
+    
+    // Continue with the rest of your code or actions with the validated email
+    // For example, you can use $email variable here, which now holds the valid email.
+    
 
     // Select query using PDO prepared statement
     $select_query = "SELECT * FROM user_table WHERE username = :username OR user_email = :email";
@@ -65,6 +103,8 @@ if (isset($_POST['user_register'])) {
         }
     }
 }
+
+
 
 // Retrieve form data
 $username = $_POST['user_name'];
