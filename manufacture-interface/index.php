@@ -893,19 +893,16 @@ include('nav.php');
                    <button data-section="About">About</button>
                    <button data-section="Contact">Contact</button>
                </div>
-               <div class="suplliers">    <button id="add-profile-btn">Add Profile</button>
-               </div> 
            </div> 
        </div>  
 </section>  
+<script src="..\manu.js"></script>
 <script>
 function redirectToLocalhost() {
   var url = window.location.protocol + '//' + window.location.hostname + ':3002';
   window.location.href = url;
 }
 </script>
-<script src="profile.js"></script>
-<script src="..\manu.js"></script>
 <?php
 include('footer.php');
 ?>

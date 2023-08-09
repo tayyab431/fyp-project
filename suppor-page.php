@@ -37,7 +37,7 @@ include($path . '/language/language-code.php');
     <ul class="nav-links">
     <li><a href="Home-page.php"><?php echo $top_nav[$language]['0']?></a></li>
     <li><a href="Aboutt.php"><?php echo $top_nav[$language]['1']?></a></li>
-    <li><a href="accessories.php"><?php echo $top_nav[$language]['2']?></a></li>
+    <li><a href="accessories.php">Products</a></li>
     <li><a href="index.php"><?php echo $top_nav[$language]['3']?></a></li>
     <li><a href="#!"><?php echo $top_nav[$language]['4']?></a></li>
     <!-- <li><a href="funda-service/admin\includes\log.php"></a></li> -->

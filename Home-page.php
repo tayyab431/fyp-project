@@ -13,6 +13,7 @@ include($path . '/language/language-code.php');
     <title>Clothing barters</title>
     <link rel="icon" href="images/WHITE-COLOR-LOGO.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="Home-page.css">
+    <link rel="stylesheet" type="text/css" href="product.css">
     <link href="http://fonts.googleapis.com/css?family=KaushanScript|Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5c515fb3d0.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>     
@@ -36,7 +37,7 @@ include($path . '/language/language-code.php');
     <ul class="nav-links">
     <li><a href="#!"><?php echo $top_nav[$language]['0']?></a></li>
     <li><a href="Aboutt.php"><?php echo $top_nav[$language]['1']?></a></li>
-    <li><a href="accessories.php"><?php echo $top_nav[$language]['2']?></a></li>
+    <li><a href="accessories.php">Products</a></li>
     <li><a href="index.php"><?php echo $top_nav[$language]['3']?></a></li>
     <li><a href="suppor-page.php"><?php echo $top_nav[$language]['4']?></a></li>
     <!-- <li><a href="funda-service/admin\includes\log.php"></a></li> -->
@@ -80,11 +81,11 @@ include($path . '/language/language-code.php');
   </nav>
 <!--home start-->
 <section class="home" id="home">
-    <div class="content"data-aos="fade-up">
-    <h3><?php echo $home_start[$language]['0']?></h3>
-    <p><?php echo $home_start[$language]['1']?>
+    <div class="content">
+    <h3 data-aos="fade-right" ><?php echo $home_start[$language]['0']?></h3>
+    <p data-aos="fade-left"><?php echo $home_start[$language]['1']?>
     </p>
-    <a href="#" class="btn"><?php echo $home_start[$language]['2']?></a>
+    <a href="login.php" class="btn" data-aos="fade-right"><?php echo $home_start[$language]['2']?></a>
     </div>
     <!-- chatbot code start -->
    <div class="container-a">
@@ -124,7 +125,7 @@ include($path . '/language/language-code.php');
       <div class="content">
           <h3><?php echo $access_ries[$language]['19']?></h3>
           <p><?php echo $access_ries[$language]['20']?></p>
-         <a href="#" class="btn"><?php echo $access_ries[$language]['21']?></a>
+         <a href="Aboutt.php" class="btn"><?php echo $access_ries[$language]['21']?></a>
               </div>
   </div>
   </section>
@@ -133,8 +134,8 @@ include($path . '/language/language-code.php');
   <h1 class="heading"><?php echo $home_start[$language]['6']?></h1>
   <div class="row">
       <div class="content">
-              <h1 data-aos="zoom-in" data-aos-delay="150"> <?php echo $home_start[$language]['7']?></h1>
-            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
+              <h1 data-aos="zoom-in" data-aos-delay="100"> <?php echo $home_start[$language]['7']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="100">
               <div class="f-icon">
              <i class="fa fa-check-square-o"></i>
               </div>
@@ -142,8 +143,8 @@ include($path . '/language/language-code.php');
                 <p><?php echo $home_start[$language]['8']?></p>
             </div>
             </div>
-            <h1  data-aos="zoom-in" data-aos-delay="150"> <?php echo $home_start[$language]['9']?></h1>
-            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
+            <h1  data-aos="zoom-in" data-aos-delay="100"> <?php echo $home_start[$language]['9']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="100">
               <div class="f-icon">
              <i class="fa fa-check-square-o"></i>
               </div>
@@ -152,7 +153,7 @@ include($path . '/language/language-code.php');
             </div>
             </div>
             <h1  data-aos="zoom-in" data-aos-delay="150"><?php echo $home_start[$language]['11']?></h1>
-            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="100">
               <div class="f-icon">
              <i class="fa fa-check-square-o"></i>
               </div>
@@ -160,8 +161,8 @@ include($path . '/language/language-code.php');
                 <p><?php echo $home_start[$language]['12']?></p>
             </div>
             </div>
-            <h1 data-aos="zoom-in" data-aos-delay="150"> <?php echo $home_start[$language]['13']?></h1>
-            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="150">
+            <h1 data-aos="zoom-in" data-aos-delay="100"> <?php echo $home_start[$language]['13']?></h1>
+            <div class="feature-dsc"  data-aos="zoom-in" data-aos-delay="100">
               <div class="f-icon">
              <i class="fa fa-check-square-o"></i>
               </div>
@@ -170,77 +171,265 @@ include($path . '/language/language-code.php');
             </div>
             </div>
       </div>
-      <div class="image"data-aos="fade-right">
+      <div class="image" data-aos="fade-right">
           <img src="images/pexels-rachel-claire-5865196.jpg">
       </div>   
   </div>
   </section>
  <!--bg img start--> 
  <section class="home4" id="home4">
-    <div class="content">
+    <div class="content" data-aos="zoom-in">
     <h3>Where imagination meets creativity</h3>
     <p>Manufacturing Process Is A Harmonious Blend Of Tradition And
      Innovation. We Honor The Heritage Of Craftsmanship, Embracing Time-Honored Techniques Passed Down Through Generations.
     </p>
-    <a href="#" class="btn"><?php echo $home_start[$language]['2']?></a>
+    <a href="login.php" class="btn"><?php echo $home_start[$language]['2']?></a>
     </div>
 </section>
 <!--accessories start-->
 <section class="accessories" id="#accessories">
-    <h1 class="heading"><?php echo $access_ries[$language]['0']?></h1>
-    <div class="box-container" data-aos="zoom-in">
-        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/acc1.jpg">
-            <h3><?php echo $access_ries[$language]['1']?></h3>
-            <p><?php echo $access_ries[$language]['2']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>         
+    <h1 class="heading"><span>Pro</span>duct</h1>
+    <div class="products-container grid">
+    <div class="product-item">
+      <div class="product-banner">
+        <a href="details.html" class="product-images">
+          <img src="assets/img/product-1-1.jpg" alt="" class="product-img default">
+          <img src="assets/img/product-1-2.jpg" alt="" class="product-img hover">
+        </a>
+        <div class="product-action">
+          <a href="#" class="action-btn" aria-label="Quick View">
+            <i class="fas fa-eye"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Add to wish list">
+            <i class="fas fa-heart"></i>
+          </a>
         </div>
-        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/a5.webp"> 
-            <h3><?php echo $access_ries[$language]['4']?></h3>
-            <p><?php echo $access_ries[$language]['5']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
+        <div class="product-badge light-pink">New</div>
+      </div>
+      <div class="product-content">
+        <span class="product-catagory">Clothing</span>
+        <a href="details.html">
+          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        </a>
+        <div class="product-catagory">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
         </div>
-        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/pexels-mathias-reding-12532620.jpg">
-            <h3><?php echo $access_ries[$language]['6']?></h3>
-            <p><?php echo $access_ries[$language]['7']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/acc4.jpg">
-            <h3><?php echo $access_ries[$language]['8']?></h3>
-            <p><?php echo $access_ries[$language]['9']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        </div>
-        <h1 class="heading"></h1>
-        <div class="box-container" data-aos="fade-up"> 
-        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/track-men.jpg">
-            <h3><?php echo $access_ries[$language]['10']?></h3>
-            <p><?php echo $access_ries[$language]['11']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/pexels-ja-kubislav-14585221.jpg">
-            <h3><?php echo $access_ries[$language]['12']?></h3>
-            <p><?php echo $access_ries[$language]['13']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/max-titov-Pp6OwIz2-kg-unsplash.jpg"> 
-            <h3><?php echo $access_ries[$language]['14']?></h3>
-            <p><?php echo $access_ries[$language]['15']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
-        <div class="box"  data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/gym.jpg">
-            <h3><?php echo $access_ries[$language]['16']?></h3>
-            <p><?php echo $access_ries[$language]['17']?></p>
-            <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>
-        </div>
+        <a href="index.html" class="btn">Find out</a>
+      </div>
     </div>
+    <div class="product-item">
+      <div class="product-banner">
+        <a href="details.html" class="product-images">
+          <img src="assets/img/product-2-1.jpg" alt="" class="product-img default">
+          <img src="assets/img/product-2-2.jpg" alt="" class="product-img hover">
+        </a>
+        <div class="product-action">
+          <a href="#" class="action-btn" aria-label="Quick View">
+            <i class="fas fa-eye"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Add to wish list">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+        <div class="product-badge light-green">New</div>
+      </div>
+      <div class="product-content">
+        <span class="product-catagory">Clothing</span>
+        <a href="details.html">
+          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        </a>
+        <div class="product-catagory">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+        </div>
+        <a href="index.html" class="btn">Find out</a>
+      </div>
+    </div>
+    <div class="product-item">
+      <div class="product-banner">
+        <a href="details.html" class="product-images">
+          <img src="assets/img/product-3-1.jpg" alt="" class="product-img default">
+          <img src="assets/img/product-3-2.jpg" alt="" class="product-img hover">
+        </a>
+        <div class="product-action">
+          <a href="#" class="action-btn" aria-label="Quick View">
+            <i class="fas fa-eye"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Add to wish list">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+        <div class="product-badge light-orange">New</div>
+      </div>
+      <div class="product-content">
+        <span class="product-catagory">Clothing</span>
+        <a href="details.html">
+          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        </a>
+        <div class="product-catagory">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+        </div>
+        <a href="index.html" class="btn">Find out</a>
+      </div>
+    </div>
+    <div class="product-item">
+      <div class="product-banner">
+        <a href="details.html" class="product-images">
+          <img src="assets/img/product-4-1.jpg" alt="" class="product-img default">
+          <img src="assets/img/product-4-2.jpg" alt="" class="product-img hover">
+        </a>
+        <div class="product-action">
+          <a href="#" class="action-btn" aria-label="Quick View">
+            <i class="fas fa-eye"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Add to wish list">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+        <div class="product-badge light-blue">New</div>
+      </div>
+      <div class="product-content">
+        <span class="product-catagory">Clothing</span>
+        <a href="details.html">
+          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        </a>
+        <div class="product-catagory">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+        </div>
+        <a href="index.html" class="btn">Find out</a>
+      </div>
+    </div>
+    <div class="product-item">
+      <div class="product-banner">
+        <a href="details.html" class="product-images">
+          <img src="assets/img/product-5-1.jpg" alt="" class="product-img default">
+          <img src="assets/img/product-5-2.jpg" alt="" class="product-img hover">
+        </a>
+        <div class="product-action">
+          <a href="#" class="action-btn" aria-label="Quick View">
+            <i class="fas fa-eye"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Add to wish list">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+        <div class="product-badge light-orange">New</div>
+      </div>
+      <div class="product-content">
+        <span class="product-catagory">Clothing</span>
+        <a href="details.html">
+          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        </a>
+        <div class="product-catagory">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+        </div>
+        <a href="index.html" class="btn">Find out</a>
+      </div>
+    </div>
+    <div class="product-item">
+      <div class="product-banner">
+        <a href="details.html" class="product-images">
+          <img src="assets/img/product-6-1.jpg" alt="" class="product-img default">
+          <img src="assets/img/product-6-2.jpg" alt="" class="product-img hover">
+        </a>
+        <div class="product-action">
+          <a href="#" class="action-btn" aria-label="Quick View">
+            <i class="fas fa-eye"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Add to wish list">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+        <div class="product-badge light-blue">New</div>
+      </div>
+      <div class="product-content">
+        <span class="product-catagory">Clothing</span>
+        <a href="details.html">
+          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        </a>
+        <div class="product-catagory">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+        </div>
+        <a href="index.html" class="btn">Find out</a>
+      </div>
+    </div>
+    <div class="product-item">
+      <div class="product-banner">
+        <a href="details.html" class="product-images">
+          <img src="assets/img/product-7-1.jpg" alt="" class="product-img default">
+          <img src="assets/img/product-7-2.jpg" alt="" class="product-img hover">
+        </a>
+        <div class="product-action">
+          <a href="#" class="action-btn" aria-label="Quick View">
+            <i class="fas fa-eye"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Add to wish list">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+        <div class="product-badge light-green">New</div>
+      </div>
+      <div class="product-content">
+        <span class="product-catagory">Clothing</span>
+        <a href="details.html">
+          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        </a>
+        <div class="product-catagory">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+        </div>
+        <a href="index.html" class="btn">Find out</a>
+      </div>
+    </div>
+    <div class="product-item">
+      <div class="product-banner">
+        <a href="details.html" class="product-images">
+          <img src="assets/img/product-8-1.jpg" alt="" class="product-img default">
+          <img src="assets/img/product-8-2.jpg" alt="" class="product-img hover">
+        </a>
+        <div class="product-action">
+          <a href="#" class="action-btn" aria-label="Quick View">
+            <i class="fas fa-eye"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="action-btn" aria-label="Add to wish list">
+            <i class="fas fa-heart"></i>
+          </a>
+        </div>
+      </div>
+      <div class="product-content">
+        <span class="product-catagory">Clothing</span>
+        <a href="details.html">
+          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        </a>
+        <div class="product-catagory">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+        </div>
+        <a href="index.html" class="btn">Find out</a>
+      </div>
+    </div>
+  </div>
 </section>
   <!--video slider start-->
   <section>
@@ -254,7 +443,7 @@ include($path . '/language/language-code.php');
           <video src="images/video_20230316_133009_edit.mp4" muted autoplay loop></video>
       </div>
   </div>
-  <div class="slide-container">
+  <div class="slide-container" autoplay loop>
       <div class="slide">
           <div class="content">
               <h3>Cutting-Edge Manufacturing Techniques</h3>
@@ -306,20 +495,30 @@ include($path . '/language/language-code.php');
 </section>
 <!--video-slider js-->
 <script>
-  let slides = document.querySelectorAll('.slide-container');
-  let index = 0;
-  function next()
-  {
-      slides[index].classList.remove('active');
+   let slides = document.querySelectorAll('.slide-container');
+    let index = 0;
+    
+    function showSlide(slideIndex) {
+      slides.forEach((slide, i) => {
+        if (i === slideIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+    }
+    function next() {
       index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-  }
-  function prev()
-  {
-      slides[index].classList.remove('active');
+      showSlide(index);
+    }
+    function prev() {
       index = (index - 1 + slides.length) % slides.length;
-      slides[index].classList.add('active');
-  }
+      showSlide(index);
+    }
+    function startAutoplay() {
+      setInterval(next, 4000); // Change the interval time (in milliseconds) to set the autoplay speed
+    }
+    startAutoplay(); 
 </script>
 <section class="about" id="About">
     <div class="row">
@@ -396,7 +595,6 @@ include($path . '/language/language-code.php');
            </div>      
     </div>
 </section>
-
 <!--footer start-->
 <footer class="footer">
   <div class="container">

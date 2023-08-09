@@ -234,3 +234,84 @@ document.addEventListener("DOMContentLoaded", () => {
   wrapper.addEventListener("mouseleave", autoPlay);
 });
 
+/*=============== SWIPER CATEGORIES ===============*/
+var swiperCatagories = new Swiper('.catagories__container', { 
+  spaceBetween: 24,
+    loop:true,    
+  navigation: { 
+  prevEl: ".swiper-button-prev",
+  nextEl: ".swiper-button-next",
+  },
+  breakpoints: {
+    350: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 24,
+    },
+    1400: {
+      slidesPerView: 6,
+      spaceBetween: 24,
+    },
+  },
+  autoplay: {
+    delay: 1300,  
+    disableOnInteraction: false,  
+  },
+});
+/*=============== SWIPER PRODUCTS ===============*/
+var swiperProducts = new Swiper('.new__container', { 
+  spaceBetween: 24,
+  loop:true,
+  
+navigation: {
+ 
+  prevEl: ".swiper-button-prev",
+  nextEl: ".swiper-button-next",
+},
+breakpoints: {
+  768: {
+    slidesPerView: 2,
+    spaceBetween: 24,
+  },
+  992: {
+    slidesPerView: 3,
+    spaceBetween: 24,
+  },
+  1400: {
+    slidesPerView: 4,
+    spaceBetween: 24,
+  },
+},
+autoplay: {
+  delay: 1300,  
+  disableOnInteraction: false,  
+},
+});
+/*=============== PRODUCTS TABS ===============*/
+const tabs = document.querySelectorAll('[data-target]'),
+tabContents = document.querySelectorAll('[content]');
+
+tabs.forEach((tab) => {
+  tab.addEventListener('click' , () => {
+    const target = document.querySelector(tab.dataset.target);
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove('active-tab');
+    });
+    target.classList.add('active-tab');
+    tabs.forEach((tab) => {
+      tab.classList.remove('active-tab');
+    });
+    tab.classList.add('active-tab');
+  });
+});

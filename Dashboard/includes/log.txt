@@ -1,0 +1,28 @@
+Received message request: Array
+(
+    [send_message] => 1
+    [sender] => 2
+    [reciever] => 1
+    [room] => 16
+    [message] => hi
+)
+
+Database error: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'product_id' at row 1
+Received message request: Array
+(
+    [send_message] => 1
+    [sender] => 2
+    [reciever] => 1
+    [room] => 16
+    [message] => hi
+)
+
+Received message request: Array
+(
+    [send_message] => 1
+    [sender] => 1
+    [reciever] => 2
+    [room] => 16
+    [message] => yes brother
+)
+

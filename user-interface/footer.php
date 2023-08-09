@@ -42,8 +42,8 @@
     </div>
   </div>
 </footer>
-    <script src="..\CB.js"></script>
-    <script src="..\app.js"></script>
+   
+    <script src="../app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -51,13 +51,17 @@
         once: true,
       });
     </script>
-    
-    <script src="..\language/lang.js"></script>
+
+
+
+    <script src="../language/lang.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+      <!--=============== SWIPER JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script src="../CB.js"></script>
     
-
+    
 
   
 </body>

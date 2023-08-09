@@ -94,29 +94,25 @@ include($path . '/session/session.php');
 
       <!-- Steps -->
       <div class="form-step form-step-active">
-        <div class="input-group">
-          <label for="username"><?php echo $join_form[$language]['1']?></label>
-          <input type="text" placeholder="<?php echo $join_form[$language]['1']?>" name="f-name" id="username" required="required" />
+      <div class="input-group">
+          
+          <input type="hidden" placeholder="Name" name="id" id="username" required="required" />
         </div>
         <div class="input-group">
-          <label for="username"><?php echo $join_form[$language]['2']?></label>
-          <input type="text" placeholder="<?php echo $join_form[$language]['2']?>" name="l-name" id="username" required="required" />
+          <label for="username">Name</label>
+          <input type="text" placeholder="Name" name="name" id="username" required="required" />
         </div>
         <div class="input-group">
-          <label for="username"><?php echo $join_form[$language]['3']?></label>
-          <input type="text" placeholder="<?php echo $join_form[$language]['3']?>" name="user_name" id="username" required="required" />
+          <label for="username">Email</label>
+          <input type="email" placeholder="Email" name="email" id="username" required="required" />
         </div>
         <div class="input-group">
-          <label for="position"><?php echo $join_form[$language]['4']?></label>
-          <input type="text" placeholder="<?php echo $join_form[$language]['4']?>" name="email" id="position" required="required" />
+          <label for="username">Phone</label>
+          <input type="number" placeholder="Phone" name="phone" id="username" required="required" />
         </div>
         <div class="input-group">
           <label for="position"><?php echo $join_form[$language]['5']?></label>
           <input type="text"  data-inputmask="'mask': '99999-9999999-9'"  placeholder="XXXXX-XXXXXXX-X"  name="cnic" required="required" id="position" />
-        </div>
-        <div class="input-group">
-          <label for="position"><?php echo $join_form[$language]['6']?></label>
-          <input type="text"  placeholder="<?php echo $join_form[$language]['7']?>"  name="language" id="position" required="required" />
         </div>
         <div class="btns-group">
           <a href="sign2.php" class="btn"><?php echo $join_page[$language]['4']?></a>
@@ -126,7 +122,7 @@ include($path . '/session/session.php');
       <div class="form-step">
         <div class="input-group">
           <label for="phone"><?php echo $join_form[$language]['8']?></label>
-          <input type="text" name="name"  placeholder="<?php echo $join_form[$language]['8']?>" id="phone" />
+          <input type="text" name="u_name"  placeholder="<?php echo $join_form[$language]['8']?>" id="phone" />
         </div>
         <div class="input-group">
           <label for="email"><?php echo $join_form[$language]['9']?></label>

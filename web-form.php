@@ -18,148 +18,151 @@ try {
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
-function has_valid_tld($email)
+
+function get($table, $condition = null, $col = '*')
 {
-    $tld_list = array("com", "net", "org", "edu", "yahoo"); // Add more valid TLDs if needed
-    $domain = explode("@", $email)[1];
-    $tld = explode(".", $domain)[1];
-    return in_array($tld, $tld_list);
+    global $con;
+
+    $query_text = "SELECT $col FROM $table WHERE 1=1 $condition";
+    $stmt = $con->prepare($query_text);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $result;
 }
 
 function has_valid_domain_dns($email)
 {
     $domain = explode("@", $email)[1];
-    return (checkdnsrr($domain, "MX") || getmxrr($domain, $mx_records));
+    return checkdnsrr($domain, "MX");
+}
+
+function is_valid_email($email)
+{
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
 if (isset($_POST['user_register'])) {
-    $user_username = $_POST['user_name'];
-    $user_email = $_POST['user_email'];
-    $user_password = $_POST['user_password'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
     $user_conf_password = $_POST['confirm_password'];
 
     // Validate and sanitize input
-    $user_username = trim($_POST['user_name']); // Trim leading and trailing spaces
-    $user_email = filter_var($_POST['user_email'], FILTER_SANITIZE_EMAIL);
+    $name = trim($_POST['name']); // Trim leading and trailing spaces
+ 
     // ... repeat the same for other inputs if needed
 
-    // Validate username format and minimum length
-    if (strlen($user_username) < 8 || !preg_match('/^[a-zA-Z0-9]+$/', $user_username)) {
-        echo "<script>alert('Username should be at least 8 characters and only contain alphanumeric characters.')</script>";
-        echo "<script>window.location.href = 'login.php';</script>";
-        exit();
-    }
-
-        // Validate email format ("ali12@gmail.com" or "ali12@example.com" and similar formats)
-    if (!preg_match('/^[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/i', $user_email)) {
+    if (!is_valid_email($email)) {
         echo "<script>alert('Invalid email format.')</script>";
         echo "<script>window.location.href = 'login.php';</script>";
         exit();
     }
 
-    // Additional validation: Check if the TLD is valid
-    if (!has_valid_tld($user_email)) {
-        echo "<script>alert('Invalid TLD (Top-Level Domain) for the email.')</script>";
-        echo "<script>window.location.href = 'login.php';</script>";
-        exit();
-    }
-
     // Additional validation: Check if the domain has valid DNS records
-    if (!has_valid_domain_dns($user_email)) {
+    if (!has_valid_domain_dns($email)) {
         echo "<script>alert('Invalid domain DNS records for the email.')</script>";
         echo "<script>window.location.href = 'login.php';</script>";
         exit();
     }
-    
-    // Continue with the rest of your code or actions with the validated email
-    // For example, you can use $email variable here, which now holds the valid email.
-    
+
 
     // Select query using PDO prepared statement
-    $select_query = "SELECT * FROM user_table WHERE username = :username OR user_email = :email";
+    $select_query = "SELECT * FROM panel_users WHERE name = :name OR email = :email";
     $stmt = $con->prepare($select_query);
-    $stmt->execute(['username' => $user_username, 'email' => $user_email]);
+    $stmt->execute(['name' => $name, 'email' => $email]);
     $rows_count = $stmt->rowCount();
 
     if ($rows_count > 0) {
-        echo "<script>alert('Username or email already exists')</script>";
+        echo "<script>alert('name or email already exists')</script>";
         echo "<script>window.location.href = 'login.php';</script>";
-    } else if ($user_password != $user_conf_password) {
+    } else if ($password != $user_conf_password) {
         echo "<script>alert('Passwords do not match')</script>";
         echo "<script>window.location.href = 'login.php';</script>";
     } else {
-        $hashed_password = password_hash($user_password, PASSWORD_BCRYPT);
+        $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-        // Insert query using PDO prepared statement
-        $insert_query = "INSERT INTO user_table (username, user_email, hashed_password) VALUES (:username, :email, :password)";
-        $stmt = $con->prepare($insert_query);
-        $stmt->execute(['username' => $user_username, 'email' => $user_email, 'password' => $hashed_password]);
+         // Insert query using PDO prepared statement
+    $insert_query = "INSERT INTO panel_users (id, name, email, phone, confirm_password, hashed_password, user_type) VALUES (NULL, :name, :email, :phone, :password, :hashed_password, 'Customer')";
+    $stmt = $con->prepare($insert_query);
+    
+    // Check the placeholders in the query and the array passed to execute()
+    $execute_params = [
+        'name' => $name,
+        'email' => $email,
+        'phone' => $phone,
+        'password' => $hashed_password,
+        'hashed_password' => $hashed_password
+    ];
 
-        if ($stmt) {
-            echo "<script>alert('Data inserted successfully')</script>";
-            echo "<script>window.location.href = 'login.php';</script>";
-        } else {
-            die($con->errorInfo());
-        }
+    $stmt->execute($execute_params);
+
+    if ($stmt) {
+        echo "<script>alert('Data inserted successfully')</script>";
+        echo "<script>window.location.href = 'login.php';</script>";
+    } else {
+        die($con->errorInfo());
     }
+}
 }
 
 
 
 // Retrieve form data
-$username = $_POST['user_name'];
-$password = $_POST['user_password'];
+$email = trim($_POST['email']); // Trim leading and trailing spaces
+$password = trim($_POST['password']); // Trim leading and trailing spaces
 
-// Validate and sanitize input
-$username = trim($_POST['user_name']); // Trim leading and trailing spaces
-$password = trim($_POST['user_password']); // Trim leading and trailing spaces
+// Prepare the SQL statement for login
+$loginStmt = $con->prepare("SELECT * FROM panel_users WHERE email = :email");
+$loginStmt->bindParam(':email', $email);
+$loginStmt->execute();
 
-// Prepare the SQL statement for users
-$userStmt = $con->prepare("SELECT * FROM user_table WHERE username = :username");
-$userStmt->bindParam(':username', $username);
-$userStmt->execute();
-
-// Prepare the SQL statement for manufacturers
-$manufacturerStmt = $con->prepare("SELECT * FROM manufacturers WHERE username = :username");
-$manufacturerStmt->bindParam(':username', $username);
-$manufacturerStmt->execute();
-
-// Check if the user exists in the users table
-if ($userRow = $userStmt->fetch(PDO::FETCH_ASSOC)) {
-    // Verify the password for users
+// Check if the user exists in the database
+if ($userRow = $loginStmt->fetch(PDO::FETCH_ASSOC)) {
+    // Verify the password
     if (password_verify($password, $userRow['hashed_password'])) {
-        // Set session variables for users
-        $_SESSION['username'] = $userRow['username'];
-        $_SESSION['user_role'] = 'user';
+        // Set session variables
+        $_SESSION['name'] = $userRow['name'];
+        $_SESSION['email'] = $userRow['email'];
+        $_SESSION['login_user_id'] = $userRow['id'];
 
-        // Redirect to the user interface
-        echo "<script>alert('Welcome user.....')</script>";
-        echo "<script>window.location.href = 'user-interface/user_interface.php';</script>";
-        exit();
+        if ($userRow['user_type'] === 'Customer') {
+            $_SESSION['user_type'] = 'Customer';
+            // Redirect to the user interface
+            echo "<script>alert('Welcome user.....')</script>";
+            echo "<script>window.location.href = 'user-interface/user_interface.php';</script>";
+            exit();
+        } elseif ($userRow['user_type'] === 'Manufacturer') {
+            $_SESSION['user_type'] = 'Manufacturer';
+            // Redirect to the manufacturer interface
+            echo "<script>alert('Welcome manufacturer.....')</script>";
+            echo "<script>window.location.href = 'manufacture-interface/manufacture_interface.php';</script>";
+            exit();
+        }
     }
 }
 
-// Check if the user exists in the manufacturers table
-if ($manufacturerRow = $manufacturerStmt->fetch(PDO::FETCH_ASSOC)) {
-    // Verify the password for manufacturers
-    if (password_verify($password, $manufacturerRow['hashed_password'])) {
-        // Set session variables for manufacturers
-        $_SESSION['username'] = $manufacturerRow['username'];
-        $_SESSION['user_role'] = 'manufacturer';
-        $_SESSION['manufacturer_data'] = $manufacturerRow;
+// Invalid username or password
+echo "<script>alert('Invalid username or password')</script>";
+echo "<script>window.location.href = 'login.php';</script>";
+exit();
 
-        // Redirect to the manufacturer interface
-        echo "<script>alert('Welcome manufacturer.....')</script>";
-        echo "<script>window.location.href = 'manufacture-interface/manufacture_interface.php';</script>";
-        exit();
-    } else {
-        echo "<script>alert('Invalid username or password')</script>";
-        echo "<script>window.location.href = '../login.php';</script>";
-        exit();
+    if (isset($_SESSION['login_user_id'])) {
+        $cust = $_SESSION['login_user_id'];
+        $menu = $_GET['menu'];
+        $date = date('Y-m-d');
+
+        $cond = "AND u2=$cust AND u1=$menu";
+        $cond2 = "AND u1=$cust AND u2=$menu";
+        $data = get('chat_room', $cond);
+        $data2 = get('chat_room', $cond2);
+        if (empty($data) && empty($data2)) {
+            $query = "INSERT INTO `chat_room`(`u1`, `u2`, `date`, `status`)
+            VALUES ('$menu','$cust','$date',1)";
+            $stmt = $con->prepare($query);
+            $stmt->execute();
+        }
     }
-} else {
-    echo "<script>alert('Invalid username or password')</script>";
-    echo "<script>window.location.href = '../login.php';</script>";
-    exit();
-}
+
 ?>

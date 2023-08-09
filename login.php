@@ -5,7 +5,7 @@ include('include/connect.php');
 $path = dirname(__FILE__);
 include($path . '/language/lang.php');
 include($path . '/language/language-code.php');
-include($path . '/session/session.php');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,6 +38,31 @@ include($path . '/session/session.php');
   transform: translateY(-50%);
   cursor: pointer;
 }
+#input-fields {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--body-color);
+    outline: none;
+    background: transparent;
+    color: #ffff;}
+    .form-box
+ {
+     width: 380px;
+     height: 535px;
+     position: relative;   
+     
+     padding: 5px;
+     overflow: hidden;
+     margin:  6% auto;
+     border-radius: 10px;
+ }
+ ::placeholder {
+  color: #ffff; /* Change this color to your desired color */
+}
 
      </style>
    </head>
@@ -58,7 +83,7 @@ include($path . '/session/session.php');
     <ul class="nav-links">
     <li><a href="Home-page.php"><?php echo $top_nav[$language]['0']?></a></li>
     <li><a href="Aboutt.php"><?php echo $top_nav[$language]['1']?></a></li>
-    <li><a href="accessories.php"><?php echo $top_nav[$language]['2']?></a></li>
+    <li><a href="accessories.php">Products</a></li>
     <li><a href="index.php"><?php echo $top_nav[$language]['3']?></a></li>
     <li><a href="suppor-page.php"><?php echo $top_nav[$language]['4']?></a></li>
     <!-- <li><a href="funda-service/admin\includes\log.php"></a></li> -->
@@ -118,10 +143,10 @@ include($path . '/session/session.php');
     <h1 class="heading"></h1>
 
    <!-- Login Form -->
-   <form id="login" action="web-form.php" method="post" enctype="multipart/form-data" class="input-group">
-      <input type="text" style="text-transform: none;" class="input-feild" autocomplete="off" placeholder="<?php echo $login_page[$language]['2']?>" required="required" name="user_name"/>
+   <form id="login" action="log_in.php" method="post" enctype="multipart/form-data" class="input-group">
+      <input type="email" style="text-transform: none;" class="input-feild" autocomplete="off" placeholder="email" required="required" name="email"/>
       <div class="password-wrapper">
-        <input type="password" class="input-feild" placeholder="<?php echo $login_page[$language]['3']?>" required="required" name="user_password" id="password"/>
+        <input type="password" class="input-feild" placeholder="<?php echo $login_page[$language]['3']?>" required="required" name="password" id="password"/>
         <span class="eye-icon" id="eye-icon" onmousedown="togglePassword('password')"><i class="far fa-eye"></i></span>
       </div>
       <input type="checkbox" class="checkbox"> <span class="span"><?php echo $login_page[$language]['4']?></span>
@@ -130,10 +155,12 @@ include($path . '/session/session.php');
 
    <!-- Registration Form -->
 <form id="register" action="web-form.php" method="post" class="input-group">
-  <input type="text" style="text-transform: none;" class="input-feild" placeholder=" <?php echo $login_page[$language]['2']?>" required="required" name="user_name">
-   <input type="email" style="text-transform: none;" class="input-feild" placeholder="<?php echo $login_page[$language]['5']?>" required="required" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$" name="user_email" />
+<input type="hidden"  class="input-feild"  required="required" name="1d">
+  <input type="text" style="text-transform: none;" class="input-feild" placeholder=" Name" required="required" name="name">
+   <input type="email" style="text-transform: none;" class="input-feild" placeholder="<?php echo $login_page[$language]['5']?>" required="required" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$" name="email" />
+   <input type="number" id="input-fields" class="input-field" placeholder="Phone" name="phone"  required="required" />
     <div class="password-wrapper">
-    <input type="password" class="input-feild" placeholder="<?php echo $login_page[$language]['3']?>" autocomplete="off" required="required" name="user_password" id="password-register"/>
+    <input type="password"  class="input-feild"  placeholder="<?php echo $login_page[$language]['3']?>" autocomplete="off" required="required" name="password" id="password-register"/>
     <span class="eye-icon" id="eye-icon-register" onmousedown="togglePassword('password-register')"><i class="far fa-eye"></i></span>
   </div>
   <div class="password-wrapper">
