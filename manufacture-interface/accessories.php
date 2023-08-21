@@ -85,7 +85,7 @@ if (isset($_SESSION['logout_message'])) {
     <i class='bx bx-x siderbarClose'></i>
     </div>
     <ul class="nav-links">
-    <li><a href="user_interface.php"><?php echo $top_nav[$language]['0']?></a></li>
+    <li><a href="manufacture_interface.php"><?php echo $top_nav[$language]['0']?></a></li>
     <li><a href="..\Dashboard/index2.php">Dashboard</a></li>
     <li><a href="accessories.php">Products</a></li>
     <li><a href="index.php"><?php echo $top_nav[$language]['3']?></a></li>

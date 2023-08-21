@@ -25,6 +25,13 @@ function fetchManufacturerProfiles() {
             <div class="card-content">
               <h4 class="card-title">Description</h4>
               <p class="card-desc">${p.description}</p>
+              <h4 class="card-title"> <a href="user-rate/index.php?manufacturer_id=${p.id}">View Ratings</a><div style="white-space: nowrap;">
+              <span style="display: inline-block; width: 15px; height: 10px; background-color: red;"></span>
+              <span style="display: inline-block; width: 10px; height: 7px; background-color: green;"></span>
+              <span style="display: inline-block; width: 7px; height: 5px; background-color: blue;"></span>
+              <span style="display: inline-block; width: 4px; height: 3px; background-color: yellow;"></span>
+              <span style="display: inline-block; width: 3px; height: 2px; background-color: orange;"></span>
+            </div></h4>
             </div>
             <div class="social-links">
               <!-- Add social media links dynamically based on data -->

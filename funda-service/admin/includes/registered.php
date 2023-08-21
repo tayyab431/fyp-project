@@ -1,10 +1,11 @@
 <?php
 
   $path = dirname(__FILE__);
+  include($path.'/dbconfig/dbconn.php');
   include($path.'/header.php');
   include($path.'/top-nav.php');
   include($path.'/sidebar.php');
-  include($path.'/dbconfig/dbconn.php')
+ 
 ?>
 
  <!-- Content Wrapper. Contains page content -->
@@ -109,6 +110,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone number</th>
+                    <th>user_type</th>
                     <th>Action </th>
                   </tr>
                   </thead>
@@ -125,6 +127,7 @@
                 <td><?php echo $row['name']; ?> </td>
                 <td><?php echo $row['email'];?></td>
                 <td> <?php echo $row['phone']; ?></td>
+                <td> <?php echo $row['user_type']; ?></td>
                 <td>
                     <a href="registered-edit.php?user_id=<?php echo $row['id']; ?>" class="btn btn-info btn-sm">Edit</a>
                     <button type="button" value="<?php echo $row['id']; ?>" class="btn btn-danger btn-sm deletebtn">Delete</button>

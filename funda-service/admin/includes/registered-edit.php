@@ -1,10 +1,11 @@
 <?php
 
   $path = dirname(__FILE__);
+  include($path.'/dbconfig/dbconn.php');
   include($path.'/header.php');
   include($path.'/top-nav.php');
   include($path.'/sidebar.php');
-  include($path.'/dbconfig/dbconn.php')
+ 
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -63,6 +64,10 @@ if(isset($_GET['user_id'])){
         <input type="text" name= "phone" value = "<?php echo isset($row['phone']) ? $row['phone'] : '' ?>" class="form-control" >
       </div>
       <div class="form-group">
+        <label for="user-type">user_type</label>
+        <input type="text" name= "user_type" value = "<?php echo isset($row['user_type']) ? $row['user_type'] : '' ?>" class="form-control" >
+      </div>
+      <div class="form-group">
         <label for="status">Password</label>
         <input type="password" name= "password" value = "<?php echo isset($row['password']) ? $row['password'] : '' ?>" class="form-control">
       </div>
@@ -94,31 +99,54 @@ else {
 <?php
   include($path.'/footer.php');
 ?>
+<?php
+  include($path.'/script.php');
+?>
 
 <?php 
-if(isset($_POST['updateuser'])){
+if (isset($_POST['updateuser'])) {
   $user_id = $_POST['user_id'];
   $name = $_POST['name'];
-  $phone = $_POST['phone'];
   $email = $_POST['email'];
+  $phone = $_POST['phone'];
+  $user_type = $_POST['user_type'];
   $password = $_POST['password'];
 
-  // Validate required fields
-  if(empty($name) || empty($phone) || empty($email) || empty($password)){
-    echo "<script>alert('One or more required fields are missing.');</script>";
-    exit();
+  // Determine which fields are provided and construct the query accordingly
+  $update_fields = array();
+  if (!empty($name)) {
+      $update_fields[] = "name='$name'";
+  }
+  if (!empty($email)) {
+      $update_fields[] = "email='$email'";
+  }
+  if (!empty($phone)) {
+      $update_fields[] = "phone='$phone'";
+  }
+  if (!empty($user_type)) {
+      $update_fields[] = "user_type='$user_type'";
+  }
+  if (!empty($password)) {
+      $update_fields[] = "password='$password'";
   }
 
-  $query = "UPDATE panel_users SET name='$name', phone='$phone', email='$email', password='$password' WHERE id='$user_id'";
-  $query_run=mysqli_query($con,$query);
+  // Validate required fields
+  if (empty($update_fields)) {
+      echo "<script>alert('No fields were provided for update.');</script>";
+      exit();
+  }
+
+  $update_fields_string = implode(', ', $update_fields);
+
+  $query = "UPDATE panel_users SET $update_fields_string WHERE id='$user_id'";
+  $query_run = mysqli_query($con, $query);
 
   if ($query_run) {
-    // Redirect the user to the thank-you-page using a GET request
-    echo "<script>alert('User updated successfully.');</script>";
-    exit();
+      echo "<script>alert('User updated successfully.');</script>";
+      // Redirect or display success message as needed
   } else {
-    echo "<script>alert('Update failed.');</script>";
-    exit();
+      echo "<script>alert('Update failed.');</script>";
   }
 }
+
 ?>

@@ -198,6 +198,7 @@ nav .nav-bar
     background-color: var(--nav-color);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     
     margin: 0px auto;
 }
@@ -524,6 +525,15 @@ body.dark .search-field i
     background-position:center ;
  }
 
+ .homo
+ {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:linear-gradient(rgb(60 60 60 / 40%), rgb(60 60 60 / 30%)),url(images/login.jpg) no-repeat;
+    background-size:cover;
+    background-position:center ;
+ }
  .btn
  {
     display: inline-block;

@@ -77,6 +77,11 @@ if ($userRow = $loginStmt->fetch(PDO::FETCH_ASSOC)) {
             echo "<script>alert('Welcome manufacturer.....')</script>";
             echo "<script>window.location.href = 'manufacture-interface/manufacture_interface.php';</script>";
             exit();
+        } elseif ($_SESSION['user_type'] === 'admin') {
+            // Redirect to the manufacturer interface
+            echo "<script>alert('Welcome admin.....')</script>";
+            echo "<script>window.location.href = 'funda-service/admin/includes/index.php';</script>";
+            exit();
         }
     }
 }

@@ -9,7 +9,7 @@ ini_set('display_errors', 1);
   
   $con=mysqli_connect('172.18.0.2','root','786110','clothdatabase');
 if($con){
-    echo "connected success";
+    
 }
 else{
 die(mysqli_error($con));}
@@ -18,8 +18,9 @@ $userCount = 0;
 $supplierCount = 0;
 
 // Fetch user registration count
-$userQuery = "SELECT COUNT(*) AS total_users FROM panel_users";
+$userQuery = "SELECT COUNT(*) AS total_users FROM panel_users WHERE user_type = 'Customer'";
 $userResult = mysqli_query($con, $userQuery);
+
 if ($userResult) {
   $userData = mysqli_fetch_assoc($userResult);
   $userCount = $userData['total_users'];
@@ -29,7 +30,7 @@ if ($userResult) {
 }
 
 // Fetch supplier registration count
-$supplierQuery = "SELECT COUNT(*) AS total_suppliers FROM manufacturers";
+$supplierQuery = "SELECT COUNT(*) AS total_suppliers FROM panel_users WHERE user_type = 'Manufacturer'";
 $supplierResult = mysqli_query($con, $supplierQuery);
 if ($supplierResult) {
   $supplierData = mysqli_fetch_assoc($supplierResult);
@@ -37,6 +38,17 @@ if ($supplierResult) {
 } else {
   // Handle database query error
   echo "Error fetching supplier count: " . mysqli_error($con);
+}
+// Fetch total number of orders
+$orderQuery = "SELECT COUNT(*) AS all_orders FROM orders";
+$orderResult = mysqli_query($con, $orderQuery);
+
+if ($orderResult) {
+  $orderData = mysqli_fetch_assoc($orderResult);
+  $all_orders = $orderData['all_orders'];
+} else {
+  // Handle database query error
+  echo "Error fetching total orders count: " . mysqli_error($con);
 }
  
 ?>
@@ -69,14 +81,14 @@ if ($supplierResult) {
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+              <h3><?php echo $all_orders; ?></h3>
 
                 <p>New Orders</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="orders.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -91,7 +103,7 @@ if ($supplierResult) {
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="registered.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -106,7 +118,7 @@ if ($supplierResult) {
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="registered.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

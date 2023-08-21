@@ -82,7 +82,7 @@ include($path . '/language/language-code.php');
   </nav>
 <section class="home1" id="home">
     <div class="content">
-    <h3><?php echo $home_start[$language]['0']?></h3>
+    <h3 ><?php echo $home_start[$language]['0']?></h3>
     <p><?php echo $home_start[$language]['15']?>
     </p>
     <a href="#" class="btn"><?php echo $access_ries[$language]['3']?></a>

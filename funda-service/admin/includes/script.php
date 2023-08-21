@@ -46,6 +46,31 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- /.content-wrapper -->
+<script>
+// Get references to the input field and search button
+const searchInput = document.getElementById("searchInput");
+const searchButton = document.getElementById("searchButton");
 
+// Add an event listener to the search button
+searchButton.addEventListener("click", function() {
+  const searchTerm = searchInput.value.toLowerCase().trim(); // Convert search term to lowercase
+
+  // Loop through each table and its rows
+  const tables = document.querySelectorAll("table"); // Get all table elements
+  tables.forEach(table => {
+    const rows = table.querySelectorAll("tbody tr"); // Get rows within the current table
+    rows.forEach(row => {
+      const rowData = row.textContent.toLowerCase();
+      if (rowData.includes(searchTerm)) {
+        row.style.display = ""; // Show matching rows
+      } else {
+        row.style.display = "none"; // Hide non-matching rows
+      }
+    });
+  });
+});
+
+
+  </script>
 
 

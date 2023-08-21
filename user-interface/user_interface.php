@@ -15,7 +15,7 @@ include('nav.php');
           <div class="chatbox__support">
               <div class="chatbox__header">
                   <div class="chatbox__image--header">
-                      <img src="icons8-chatbot-40.png" alt="image">
+                      <img src="../icons8-chatbot-40.png" alt="image">
                   </div>
                   <div class="chatbox__content--header">
                       <h4 class="chatbox__heading--header"><?php echo $home_start[$language]['3']?></h4>

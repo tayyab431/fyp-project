@@ -144,7 +144,7 @@ include($path . '/language/language-code.php');
 
    <!-- Login Form -->
    <form id="login" action="log_in.php" method="post" enctype="multipart/form-data" class="input-group">
-      <input type="email" style="text-transform: none;" class="input-feild" autocomplete="off" placeholder="email" required="required" name="email"/>
+      <input type="email" style="text-transform: none;" class="input-feild" autocomplete="off" placeholder="Email" required="required" name="email"/>
       <div class="password-wrapper">
         <input type="password" class="input-feild" placeholder="<?php echo $login_page[$language]['3']?>" required="required" name="password" id="password"/>
         <span class="eye-icon" id="eye-icon" onmousedown="togglePassword('password')"><i class="far fa-eye"></i></span>

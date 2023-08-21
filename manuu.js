@@ -17,7 +17,7 @@ function fetchManufacturerProfiles() {
       <div class="card">
         <div class="card-header">
           <div class="card-cover"></div>
-          <img src="../Dashboard/includes/profiles/${p.profile_image_path}" alt="Manufacturer Profile">  
+          <img src="Dashboard/includes/profiles/${p.profile_image_path}" alt="Manufacturer Profile">  
           <h1>${p.name}</h1>
         </div>
         <div class="card-main">
@@ -25,15 +25,21 @@ function fetchManufacturerProfiles() {
             <div class="card-content">
               <h4 class="card-title">Description</h4>
               <p class="card-desc">${p.description}</p>
-             
+              <h4 class="card-title"> <a href="login.php">View Ratings</a><div style="white-space: nowrap;">
+              <span style="display: inline-block; width: 15px; height: 10px; background-color: red;"></span>
+              <span style="display: inline-block; width: 10px; height: 7px; background-color: green;"></span>
+              <span style="display: inline-block; width: 7px; height: 5px; background-color: blue;"></span>
+              <span style="display: inline-block; width: 4px; height: 3px; background-color: yellow;"></span>
+              <span style="display: inline-block; width: 3px; height: 2px; background-color: orange;"></span>
+            </div></h4>
             </div>
-           
             <div class="social-links">
               <!-- Add social media links dynamically based on data -->
-              ${p.fb ? '<a href="${p.fb}"><i class="fab fa-facebook-f"></i></a>' : ''}
-              ${p.twitter ? '<a href="${p.twitter}"><i class="fab fa-twitter"></i></a>' : ''}
-              ${p.insta ? '<a href="${p.insta}"><i class="fab fa-instagram"></i></a>' : ''}
-              ${p.linkdin ? '<a href="${p.linkdin}"><i class="fab fa-linkedin-in"></i></a>' : ''}
+              ${p.fb ? `<a href="${p.fb}" target="_blank"><i class="fab fa-facebook-f"></i></a>` : ''}
+              ${p.twitter ? `<a href="${p.twitter}" target="_blank"><i class="fab fa-twitter"></i></a>` : ''}
+              ${p.insta ? `<a href="${p.insta}" target="_blank"><i class="fab fa-instagram"></i></a>` : ''}
+              ${p.linkdin ? `<a href="${p.linkdin}" target="_blank"><i class="fab fa-linkedin-in"></i></a>` : ''}
+              
             </div>
           </div>
           <div class="card-section" id="About">
@@ -113,76 +119,49 @@ function fetchManufacturerProfiles() {
     });
   }
   
-     // Function to initialize card functionality
-     function initializeCardFunctionality() {
-      const cards = document.querySelectorAll('.card');
+    // Function to initialize card functionality
+function initializeCardFunctionality() {
+  const cards = document.querySelectorAll('.card');
 
-      cards.forEach(function (card) {
-          const btns = card.querySelectorAll('.card-buttons button');
-          const sections = card.querySelectorAll('.card-section');
+  cards.forEach(function (card) {
+    const btns = card.querySelectorAll('.card-buttons button');
+    const sections = card.querySelectorAll('.card-section');
 
-          card.addEventListener("click", function(event) {
-              const clickedElement = event.target;
-              const section = clickedElement.dataset.section;
+    card.addEventListener("click", function(event) {
+      const clickedElement = event.target;
+      const section = clickedElement.dataset.section;
 
-              if (section) {
-                  // Remove active class from all buttons within the card
-                  btns.forEach(function(btn) {
-                      btn.classList.remove("active");
-                  });
+      if (section) {
+        // Remove active class from all buttons within the card
+        btns.forEach(function(btn) {
+          btn.classList.remove("active");
+        });
 
-                  // Remove active class from all sections within the card
-                  sections.forEach(function(section) {
-                      section.classList.remove("active");
-                  });
+        // Remove active class from all sections within the card
+        sections.forEach(function(section) {
+          section.classList.remove("active");
+        });
 
-                  // Add active class to the clicked button
-                  clickedElement.classList.add("active");
+        // Add active class to the clicked button
+        clickedElement.classList.add("active");
 
-                  // Add active class to the corresponding section within the card
-                  const targetSection = card.querySelector('#' + section);
-                  targetSection.classList.add("active");
-              }
-          });
-
-          // Handle the "Contact Me" button click
-          const contactBtn = card.querySelector('.contact-me');
-          contactBtn.addEventListener('click', function (event) {
-              event.preventDefault();
-              const manufacturerId = contactBtn.dataset.manufacturerId;
-
-              // Call the function to initiate a chat with the selected manufacturer
-              initiateChat(manufacturerId);
-          });
-      });
-  }
-
-// Function to initiate a chat with the selected manufacturer
-function initiateChat(manufacturerId) {
-  // Make an AJAX request to create a new chat room with the selected manufacturer
-  $.ajax({
-    url: 'create_chat_room.php', // Replace with the correct URL for the PHP script
-    type: 'POST',
-    dataType: 'json',
-    data: {
-      send_message: 1, // Add the 'send_message' parameter
-      manufacturerId: manufacturerId
-    },
-    success: function (response) {
-      if (response.success) {
-        // Redirect to the chat view for the manufacturer
-        window.location.href = '..\Dashboard/chat_view2.php';
-      } else {
-        console.error('Error creating chat room:', response.message);
+        // Add active class to the corresponding section within the card
+        const targetSection = card.querySelector('#' + section);
+        targetSection.classList.add("active");
       }
-    },
-    error: function (xhr, status, error) {
-      console.error('Error creating chat room:', error);
-    }
+    });
+
+    // Handle the "Contact Me" button click
+    const contactBtn = card.querySelector('.contact-me');
+    contactBtn.addEventListener('click', function (event) {
+      event.preventDefault();
+      // Redirect to the login page
+      window.location.href = 'login.php';
+    });
   });
 }
 
-  // Call the function to fetch and display the manufacturer profiles on page load
-  $(document).ready(function() {
-    fetchManufacturerProfiles();
-  });
+// Call the function to fetch and display the manufacturer profiles on page load
+$(document).ready(function() {
+  fetchManufacturerProfiles();
+});

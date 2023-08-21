@@ -51,7 +51,7 @@ if ($_SESSION['user_type'] == 'Manufacturer') {
     <title>Clothing barters</title>
     <link rel="icon" href="images/WHITE-COLOR-LOGO.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../Home-page.css">
-    <link rel="stylesheet" type="text/css" href="../product.css">
+    
     <link href="http://fonts.googleapis.com/css?family=KaushanScript|Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5c515fb3d0.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>     
@@ -76,7 +76,7 @@ if ($_SESSION['user_type'] == 'Manufacturer') {
     <ul class="nav-links">
     <li><a href="manufacture_interface.php"><?php echo $top_nav[$language]['0']?></a></li>
     <li><a href="..\Dashboard/index.php">Dashboard</a></li>
-    <li><a href="accessories.php">Products</a></li>
+    <!--<li><a href="accessories.php">Products</a></li>-->
     <li><a href="index.php"><?php echo $top_nav[$language]['3']?></a></li>
     <li><a href="suppor-page.php"><?php echo $top_nav[$language]['4']?></a></li>
     

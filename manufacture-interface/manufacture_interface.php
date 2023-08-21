@@ -2,7 +2,7 @@
 include('nav.php');
 ?>
 <!--home start-->
-<section class="home homi"  id="home">
+<section class="home homo"  id="home">
     <div class="content"data-aos="fade-up">
     <h3><?php echo $home_start[$language]['0']?></h3>
     <p><?php echo $home_start[$language]['1']?>
@@ -108,7 +108,7 @@ include('nav.php');
     <a href="login.php" class="btn"><?php echo $home_start[$language]['2']?></a>
     </div>
 </section>
-<!--accessories start-->
+<!--accessories start
 <section class="accessories" id="#accessories">
     <h1 class="heading"><span>Pro</span>duct</h1>
     <div class="products-container grid">
@@ -352,7 +352,7 @@ include('nav.php');
       </div>
     </div>
   </div>
-</section>
+</section>-->
   <!--video slider start-->
   <section>
 <div class="container">
