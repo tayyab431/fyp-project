@@ -154,7 +154,7 @@ include($path . '/language/language-code.php');
 <!-- Modal -->
 <div id="myModal" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
+    <span id="closeButton" class="close" onclick="closeModal()">&times;</span>
     <div class="container">
       <p id="modalContent"></p>
     </div>
@@ -257,66 +257,93 @@ include($path . '/language/language-code.php');
   
     <!-- Include this script tag after the HTML -->
 <script>
-    // Function to close the modal
-    function closeModal() {
-      const modal = document.getElementById("myModal");
-      modal.style.display = "none";
-    }
+   document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("searchInput");
+  const supportOptions = document.getElementById("supportOptions").children;
+  const modal = document.getElementById("myModal");
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.getElementById("searchInput");
-    const supportOptions = document.getElementById("supportOptions").children;
+  searchInput.addEventListener("input", function () {
+    const query = searchInput.value.trim().toLowerCase();
 
-    searchInput.addEventListener("input", function () {
-      const query = searchInput.value.trim().toLowerCase();
-
-      // Loop through each support option and show/hide based on the search query
-      for (const option of supportOptions) {
-        const optionText = option.textContent.toLowerCase();
-        if (optionText.includes(query)) {
-          option.style.display = "block";
-        } else {
-          option.style.display = "none";
-        }
+    // Loop through each support option and show/hide based on the search query
+    for (const option of supportOptions) {
+      const optionText = option.textContent.toLowerCase();
+      if (optionText.includes(query)) {
+        option.style.display = "block";
+      } else {
+        option.style.display = "none";
       }
-    });
-
-    // Function to open the modal
-    function openModal(content) {
-      const modalContent = document.getElementById("modalContent");
-      modalContent.textContent = content;
-      const modal = document.getElementById("myModal");
-      modal.style.display = "block";
     }
-
-  
-    // Add click event listeners to the support divs
-    const accountDiv = document.querySelector(".col-md-2:nth-child(1)");
-    const paymentDiv = document.querySelector(".col-md-2:nth-child(2)");
-    const deliveryDiv = document.querySelector(".col-md-2:nth-child(3)");
-    const productDiv = document.querySelector(".col-md-2:nth-child(4)");
-    const returnDiv = document.querySelector(".col-md-2:nth-child(5)");
-
-    accountDiv.addEventListener("click", function () {
-      openModal("Please login to report any account related issue.");
-    });
-
-    paymentDiv.addEventListener("click", function () {
-      openModal("Please login to report payment issue.");
-    });
-
-    deliveryDiv.addEventListener("click", function () {
-      openModal("Please login to track your order.");
-    });
-
-    productDiv.addEventListener("click", function () {
-      openModal("Please login to register product related issue");
-    });
-
-    returnDiv.addEventListener("click", function () {
-      openModal("Please login to return your order");
-    });
   });
+
+  // Function to open the modal
+  function openModal(content) {
+    const modalContent = document.getElementById("modalContent");
+    modalContent.textContent = content;
+    modal.style.display = "block";
+
+      // Add event listener to close button
+  const closeButton = document.getElementById("closeButton");
+  
+  closeButton.addEventListener("click", closeModal);
+    // Add event listener to close modal on outside click
+    window.addEventListener("click", outsideClickHandler);
+
+    // Add event listener to close modal on Esc key press
+    window.addEventListener("keydown", escapeKeyHandler);
+  }
+
+ // Function to close the modal
+function closeModal() {
+  modal.style.display = "none";
+  const closeButton = document.getElementById("closeButton");
+  closeButton.removeEventListener("click", closeModal);
+  window.removeEventListener("click", outsideClickHandler);
+  window.removeEventListener("keydown", escapeKeyHandler);
+}
+
+  // Function to handle outside click
+  function outsideClickHandler(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
+
+  // Function to handle Esc key press
+  function escapeKeyHandler(event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  }
+
+  // Add click event listeners to the support divs
+  const accountDiv = document.querySelector(".col-md-2:nth-child(1)");
+  const paymentDiv = document.querySelector(".col-md-2:nth-child(2)");
+  const deliveryDiv = document.querySelector(".col-md-2:nth-child(3)");
+  const productDiv = document.querySelector(".col-md-2:nth-child(4)");
+  const returnDiv = document.querySelector(".col-md-2:nth-child(5)");
+
+  accountDiv.addEventListener("click", function () {
+    openModal("Please login to report any account related issue.");
+  });
+
+  paymentDiv.addEventListener("click", function () {
+    openModal("Please login to report payment issue.");
+  });
+
+  deliveryDiv.addEventListener("click", function () {
+    openModal("Please login to track your order.");
+  });
+
+  productDiv.addEventListener("click", function () {
+    openModal("Please login to register product related issue");
+  });
+
+  returnDiv.addEventListener("click", function () {
+    openModal("Please login to return your order");
+  });
+});
+
 </script>
     
     <script src="CB.js"></script>

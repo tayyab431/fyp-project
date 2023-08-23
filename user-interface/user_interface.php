@@ -7,7 +7,7 @@ include('nav.php');
     <h3><?php echo $home_start[$language]['0']?></h3>
     <p><?php echo $home_start[$language]['1']?>
     </p>
-    <a href="login.php" class="btn"><?php echo $home_start[$language]['2']?></a>
+    <a href="accessories.php" class="btn"><?php echo $home_start[$language]['2']?></a>
     </div>
     <!-- chatbot code start -->
    <div class="container-a">
@@ -47,7 +47,7 @@ include('nav.php');
       <div class="content">
           <h3><?php echo $access_ries[$language]['19']?></h3>
           <p><?php echo $access_ries[$language]['20']?></p>
-         <a href="Aboutt.php" class="btn"><?php echo $access_ries[$language]['21']?></a>
+         <a href="#" class="btn"><?php echo $access_ries[$language]['21']?></a>
               </div>
   </div>
   </section>
@@ -105,24 +105,24 @@ include('nav.php');
     <p>Manufacturing Process Is A Harmonious Blend Of Tradition And
      Innovation. We Honor The Heritage Of Craftsmanship, Embracing Time-Honored Techniques Passed Down Through Generations.
     </p>
-    <a href="login.php" class="btn"><?php echo $home_start[$language]['2']?></a>
     </div>
 </section>
+<!--accessories start-->
 <!--accessories start-->
 <section class="accessories" id="#accessories">
     <h1 class="heading"><span>Pro</span>duct</h1>
     <div class="products-container grid">
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="../assets/img/product-1-1.jpg" alt="" class="product-img default">
           <img src="../assets/img/product-1-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="../signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -137,22 +137,22 @@ include('nav.php');
           <h3 class="product-title">Colorful Pattern Shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Vibrant Patterned Shirts: Adding Colorful Flair to Your Wardrobe.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="../assets/img/product-2-1.jpg" alt="" class="product-img default">
           <img src="../assets/img/product-2-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="../signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -163,26 +163,26 @@ include('nav.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Colorful casual Shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Lively Casual Shirts: Infusing Vibrant Energy into Your Outfits.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="../assets/img/product-3-1.jpg" alt="" class="product-img default">
           <img src="../assets/img/product-3-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="../signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -193,26 +193,26 @@ include('nav.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Sports wear Shoes</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Dynamic Sports Shoes: Performance and Style in Every Step.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="../assets/img/product-4-1.jpg" alt="" class="product-img default">
           <img src="../assets/img/product-4-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="../signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -223,23 +223,23 @@ include('nav.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Plazo style trouser</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Stylish Plazo Trousers: Combining Comfort and Contemporary Fashion.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="../assets/img/product-5-1.jpg" alt="" class="product-img default">
           <img src="../assets/img/product-5-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -253,26 +253,26 @@ include('nav.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Beggy Cap</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Beggy Caps: Embracing a Relaxed and Trendy Look.</p>
         </div>
         <a href="index.html" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="../assets/img/product-6-1.jpg" alt="" class="product-img default">
           <img src="../assets/img/product-6-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="../signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -283,26 +283,26 @@ include('nav.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Flowered T-Shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Blossoming Style: Flowered T-Shirts for Fresh and Chic Outfits.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="../assets/img/product-7-1.jpg" alt="" class="product-img default">
           <img src="../assets/img/product-7-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="../signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -313,26 +313,26 @@ include('nav.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">V-style shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Casual Open-Style Shirts: Effortless Comfort with a Modern Flair.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="../assets/img/product-8-1.jpg" alt="" class="product-img default">
           <img src="../assets/img/product-8-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -342,13 +342,13 @@ include('nav.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Decent style shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Understated Elegance: Decent Style Shirts for a Polished Look.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
   </div>
@@ -517,6 +517,13 @@ include('nav.php');
            </div>      
     </div>
 </section>
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="" alt="Product Image" class="modal-img">
+    </div>
+  </div>
 <?php
 include('footer.php');
 ?>

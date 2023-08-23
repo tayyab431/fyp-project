@@ -66,6 +66,7 @@ html::-webkit-scrollbar-thumb
     --primaryBoxShadow: 0px 10px 15px rgba(44, 8, 8, 0.1);
     --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
     --primary: #423c3c;
+    --chat-in:#E0E0E0;
      /*========Fonts==========*/
      --body-font: sans-serif;
      --second-font: sans-serif;
@@ -93,6 +94,7 @@ body.dark{
     --primaryBoxShadow: 0px 10px 15px rgba(44, 8, 8, 0.1);
     --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
     --primary: #010103;
+    --chat-in:#190f0f;
     /*========Fonts==========*/
     --body-font: sans-serif;
   --second-font: sans-serif;
@@ -1598,7 +1600,7 @@ padding-right: 12px;
 
 .messages__item {
     margin-top: 10px;
-    background: #E0E0E0;
+    background: var(--chat-in);
     padding: 8px 12px;
     max-width: 70%;
 }
@@ -1635,6 +1637,9 @@ padding-right: 12px;
 .chatbox__footer input {
     width: 80%;
     border: none;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
     padding: 10px 10px;
     border-radius: 30px;
     text-align: left;

@@ -55,7 +55,7 @@ include($path . '/language/language-code.php');
        <i class='bx bx-search search'></i>
       </div>           
       <div class="search-field">
-        <input type="text" placeholder="<?php echo $top_nav[$language]['12']?>">
+        <input type="text" id="searchInput" placeholder="<?php echo $top_nav[$language]['12']?>">
         <i class='bx bx-search'></i>
     </div>
   </div>
@@ -85,7 +85,7 @@ include($path . '/language/language-code.php');
     <h3 data-aos="fade-right" ><?php echo $home_start[$language]['0']?></h3>
     <p data-aos="fade-left"><?php echo $home_start[$language]['1']?>
     </p>
-    <a href="login.php" class="btn" data-aos="fade-right"><?php echo $home_start[$language]['2']?></a>
+    <a href="accessories.php" class="btn" data-aos="fade-right"><?php echo $home_start[$language]['2']?></a>
     </div>
     <!-- chatbot code start -->
    <div class="container-a">
@@ -192,15 +192,15 @@ include($path . '/language/language-code.php');
     <div class="products-container grid">
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="assets/img/product-1-1.jpg" alt="" class="product-img default">
           <img src="assets/img/product-1-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -215,22 +215,22 @@ include($path . '/language/language-code.php');
           <h3 class="product-title">Colorful Pattern Shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Vibrant Patterned Shirts: Adding Colorful Flair to Your Wardrobe.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="assets/img/product-2-1.jpg" alt="" class="product-img default">
           <img src="assets/img/product-2-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -241,26 +241,26 @@ include($path . '/language/language-code.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Colorful casual Shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Lively Casual Shirts: Infusing Vibrant Energy into Your Outfits.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="assets/img/product-3-1.jpg" alt="" class="product-img default">
           <img src="assets/img/product-3-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -271,26 +271,26 @@ include($path . '/language/language-code.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Sports wear Shoes</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Dynamic Sports Shoes: Performance and Style in Every Step.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="assets/img/product-4-1.jpg" alt="" class="product-img default">
           <img src="assets/img/product-4-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -301,23 +301,23 @@ include($path . '/language/language-code.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Plazo style trouser</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Stylish Plazo Trousers: Combining Comfort and Contemporary Fashion.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="assets/img/product-5-1.jpg" alt="" class="product-img default">
           <img src="assets/img/product-5-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -331,26 +331,26 @@ include($path . '/language/language-code.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Beggy Cap</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Beggy Caps: Embracing a Relaxed and Trendy Look.</p>
         </div>
         <a href="index.html" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="assets/img/product-6-1.jpg" alt="" class="product-img default">
           <img src="assets/img/product-6-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -361,26 +361,26 @@ include($path . '/language/language-code.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Flowered T-Shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Blossoming Style: Flowered T-Shirts for Fresh and Chic Outfits.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="assets/img/product-7-1.jpg" alt="" class="product-img default">
           <img src="assets/img/product-7-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -391,26 +391,26 @@ include($path . '/language/language-code.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">V-style shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Casual Open-Style Shirts: Effortless Comfort with a Modern Flair.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
     <div class="product-item">
       <div class="product-banner">
-        <a href="details.html" class="product-images">
+        <a href="index.php" class="product-images">
           <img src="assets/img/product-8-1.jpg" alt="" class="product-img default">
           <img src="assets/img/product-8-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="signup.php" class="action-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -420,13 +420,13 @@ include($path . '/language/language-code.php');
       </div>
       <div class="product-content">
         <span class="product-catagory">Clothing</span>
-        <a href="details.html">
-          <h3 class="product-title">Colorful Pattern Shirts</h3>
+        <a href="index.php">
+          <h3 class="product-title">Decent style shirts</h3>
         </a>
         <div class="product-catagory">
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque dolo</p>
+         <p>Understated Elegance: Decent Style Shirts for a Polished Look.</p>
         </div>
-        <a href="index.html" class="btn">Find out</a>
+        <a href="index.php" class="btn">Find out</a>
       </div>
     </div>
   </div>
@@ -639,7 +639,15 @@ include($path . '/language/language-code.php');
     </div>
   </div>
 </footer>
-    <script src="CB.js"></script>
+  <!-- Quick View Modal -->
+  <div id="quick-view-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="" alt="Product Image" class="modal-img">
+    </div>
+  </div>
+
+   
     <script src="app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -651,5 +659,8 @@ include($path . '/language/language-code.php');
     <script src="language/lang.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="CB.js"></script>
+ 
 </body>
 </html>

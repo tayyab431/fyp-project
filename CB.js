@@ -315,3 +315,38 @@ tabs.forEach((tab) => {
     tab.classList.add('active-tab');
   });
 });
+
+
+const quickViewBtns = document.querySelectorAll('.quick-view-btn');
+const modal = document.getElementById('quick-view-modal');
+const modalImg = modal.querySelector('.modal-img');
+const closeModalBtn = modal.querySelector('.close');
+
+quickViewBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    event.preventDefault(); 
+    const imageSrc = btn.closest('.product-banner').querySelector('.product-img').getAttribute('src');
+    modalImg.src = imageSrc;
+    modal.classList.remove('hidden'); // Show the modal
+  });
+});
+
+closeModalBtn.addEventListener('click', () => {
+  closeModal();
+});
+
+modal.addEventListener('click', (event) => {
+  if (event.target === modal || event.target.classList.contains('close')) {
+    closeModal();
+  }
+});
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
+
+function closeModal() {
+  modal.classList.add('hidden'); // Hide the modal
+}

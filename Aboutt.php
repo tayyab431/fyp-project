@@ -109,35 +109,38 @@ include($path . '/language/language-code.php');
                 <img class="img" src="images/pexels-rachel-claire-5864245.jpg" alt="">
                 <h1>Unveiling the Manufacturing Art </h1>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate deleniti nulla volupt
-                    atem praesentium. Similique repellendus illo sunt blanditiis corrupti, iure nesciunt, solut
-                    a fugit ame porrobus itaque quibusdam cumque ratione omnis distinctio,
-                     labore pariatur perferendis neque provident eligendi non quisquam atque eaque accusantium numquam 
-                     laboriosam tempora laudantium repellat praesentium sapiente! Corpobusdam cumque ratione omnis distinctio,
-                     labore pariatur perferendis neque provident eligendi non quisquam atque eaque accusantium numquam 
-                     laboriosam tempora laudantium repellat praesentium sapiente! Corporis dolores, autem reiciendis ea modi,
+                In the world of fashion and craftsmanship, the art of manufacturing unveils a captivating narrative. 
+    It is a tale of intricate designs meticulously brought to life, of raw materials transformed into 
+    garments that speak volumes about creativity and innovation. From the initial sketch to the final stitch,
+    every step in the manufacturing process echoes with the dedication of skilled artisans who breathe life into the fabrics.
+     Unleashing the manufacturing art is a process of revelation. It's the moment when an idea emerges 
+    from the realm of imagination and becomes a tangible reality.
                     <br>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate deleniti nulla volupt
-                    atem praesentium. Similique repellendus illo sunt blandbusdam cumque ratione omnis distinctio,
-                     labore pariatur perferendis neque provident eligendi non quisquam atque eaque accusantium numquam 
-                     laboriosam tempora laudantium repellat praesentium sapiente! Corpobusdam cumque ratione omnis distinctio,
-                     labore pariatur perferendis neque provident eligendi non quisquam atque eaque accusantium numquam 
-                     laboriosam tempora laudantium repellat praesentium sapiente! Corpoitiis corrupti, iure nesciunt, solut
-                    a fugit ame porro recusandae. Commodi, illum voluptatem ullam qui sed quos voluptatibus i
-                    psum nam necessitatibus distinctio nesciunt quaerat. Lorem ipsum distinctio nesciunt quaerat. Lorem ipsum  
-                   e. Delectus vero inventore ratione animi soluta, non natus illo voluptatem!
+                    The journey begins with inspiration, where ideas take form and concepts come to life on paper.
+    Designs are carefully curated, each line and curve holding the promise of a unique piece of clothing.
+    The selection of materials is an art in itself, where textures, colors, and patterns are chosen 
+    to complement the envisioned masterpiece.As the process unfolds, machines and hands work in harmony,
+     transforming textiles into elegant clothing.Precision is paramount, and each stitch tells a story of craftsmanship passed down through generations.
+    The careful attention to detail ensures that every piece meets the highest standards of quality.It's the intricate embroidery that embellishes a dress,
+    the seamless fusion of technology and tradition that results in tailored perfection.
+    From the swaying of fabrics on the cutting table to the hum of sewing machines, the manufacturing art resonates 
+    with dedication, passion, and a commitment to excellence.
+
                 </p>
             </div>
             <div class="row-b">
                 <div class="column-b">
                 <img src ="images/banners.jpg" alt="">
                 <h1>Unveiling the Manufacturing Art </h1>
-                <p>Lorem ipsum dolor sit  quasi inventore, a minus quae quisquam ipsa mollitia, iure cumque totam quis harum nostrum delectus sed qui, accusantium quibusdam. Nobis placeat eius reiciendis, rerum praesentium rem aliquam laboriosam voluptatum. Maiores, atque totam?</p>
+                <p>The journey begins with inspiration, where ideas take form and concepts come to life on paper.
+    Designs are carefully curated, each line and curve holding the promise of a unique piece of clothing.</p>
             </div>
             <div class="column-b">
                 <img src ="images/119.webp" alt="">
                 <h1>Qualit at<br>Every Stitch</h1>
-                <p>Lorem ipsum dolor sit  quasi inventore, a minus quae quisquam ipsa mollitia, iure cumque totam quis harum nostrum delectus sed qui, accusantium quibusdam. Nobis placeat eius reiciendis, rerum praesentium rem aliquam laboriosam voluptatum. Maiores, atque totam?</p>
+                <p>From the initial sketch to the final stitch,
+    every step in the manufacturing process echoes with the dedication of skilled artisans who breathe life into the fabrics.
+     Unleashing the manufacturing art is a process of revelation.</p>
             </div>
            
             </div>
@@ -149,37 +152,37 @@ include($path . '/language/language-code.php');
           <i class="fas fa-laptop-code"></i>
           <h2>Chat-bot for instant response
           </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+          <p>Experience seamless communication with our chat-bot, ensuring swift and accurate responses for instant query resolution and an enhanced user experience.</p>
         </div>
         <div class="service">
           <i class="fas fa-mobile-alt"></i>
           <h2>Count on 24/7 support
           </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+          <p>Embrace uninterrupted assistance with our 24/7 support. Count on us to be there around the clock, ready to address your questions and provide timely solutions.</p>
         </div>
         <div class="service">
           <i class="fas fa-chart-pie"></i>
           <h2>Get quality work done quickly
           </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+          <p>Achieve top-notch results in record time. Our services deliver quality work promptly, ensuring your projects are executed efficiently without compromising on excellence.</p>
         </div>
         <div class="service">
         <i class="fa fa-check-square-o"></i>
           <h2>Protected Payments, Every Time
           </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+          <p>Experience secure transactions with every payment. Our robust payment system ensures your financial information is safeguarded, giving you peace of mind with every purchase.</p>
         </div>
         <div class="service">
           <i class="fas fa-id-badge"></i>
           <h2>The Best For Every Budget
           </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+          <p>Discover unmatched value across budgets. Our offerings cater to diverse financial needs, guaranteeing top-quality products and services that align with your preferences and affordability.</p>
         </div>
         <div class="service">
           <i class="fas fa-network-wired"></i>
           <h2>Quality work done quickly
           </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta temporibus, hic consequuntur nesciunt tenetur, harum, veniam velit maxime nihil sit ducimus</p>
+          <p>Experience swift delivery of exceptional work. Our efficient processes ensure that high-quality results are achieved within a short timeframe, meeting your needs effectively.</p>
         </div>
         
       </div>

@@ -188,10 +188,10 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-1-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="#" class="action-btn " aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -218,7 +218,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-2-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -248,7 +248,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-3-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -278,7 +278,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-4-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -311,7 +311,7 @@ if (isset($_SESSION['logout_message'])) {
           <a href="#" class="action-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
-          <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Join as a Manufacturer">
             <i class="fas fa-user"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Add to wish list">
@@ -338,7 +338,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-6-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -368,7 +368,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-7-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -398,7 +398,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-8-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -431,7 +431,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-13-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -461,7 +461,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-2-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -491,7 +491,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-10-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -521,7 +521,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-4-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -551,7 +551,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-5-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -581,7 +581,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-11-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -611,7 +611,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-7-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -641,7 +641,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-8-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -674,7 +674,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-1-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -704,7 +704,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-9-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -734,7 +734,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-10-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -764,7 +764,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-4-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -794,7 +794,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-5-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -824,7 +824,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-9-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -854,7 +854,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-7-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -884,7 +884,7 @@ if (isset($_SESSION['logout_message'])) {
           <img src="../assets/img/product-11-2.jpg" alt="" class="product-img hover">
         </a>
         <div class="product-action">
-          <a href="#" class="action-btn" aria-label="Quick View">
+          <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
             <i class="fas fa-eye"></i>
           </a>
           <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -999,7 +999,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-1-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1029,7 +1029,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-2-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1059,7 +1059,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-3-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1089,7 +1089,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-4-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1119,7 +1119,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-5-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1149,7 +1149,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-6-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1178,8 +1178,8 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-7-1.jpg" alt="" class="product-img default">
                   <img src="../assets/img/product-7-2.jpg" alt="" class="product-img hover">
                 </a>
-                <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                <div class="product-action"> 
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1209,7 +1209,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-1-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1239,7 +1239,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-2-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1269,7 +1269,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-3-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1299,7 +1299,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-4-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1329,7 +1329,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-5-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1359,7 +1359,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-6-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1389,7 +1389,7 @@ if (isset($_SESSION['logout_message'])) {
                   <img src="../assets/img/product-7-2.jpg" alt="" class="product-img hover">
                 </a>
                 <div class="product-action">
-                  <a href="#" class="action-btn" aria-label="Quick View">
+                  <a href="#" class="action-btn quick-view-btn" aria-label="Quick View">
                     <i class="fas fa-eye"></i>
                   </a>
                   <a href="#" class="action-btn" aria-label="Join as a Manufacturer">
@@ -1422,6 +1422,13 @@ if (isset($_SESSION['logout_message'])) {
     </div> -->
   </div>
       </section>
+         <!-- Quick View Modal -->
+     <div id="quick-view-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="" alt="Product Image" class="modal-img">
+    </div>
+  </div>
 
       <!--=============== SHOWCASE ===============-->
       <section class="showcase section">
@@ -1434,10 +1441,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Floral Print Casual Shirts</h4>
+                  <h4 class="showcase-title">Floral Print Casual purse</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                  <p>Chic Floral Print Purse for Casual Eleganceg</p>
                  </div>
               </div>
             </div>
@@ -1447,10 +1454,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Ruffled solid long Sleeves</h4>
+                  <h4 class="showcase-title">Ruffled solid square Cushion</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                  <p>Elegant Ruffled Solid Square Cushion for Cozy Comfort.</p>
                  </div>
               </div>
             </div>
@@ -1460,10 +1467,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Multi-color V-neck T-shirt</h4>
+                  <h4 class="showcase-title">Multi-color bag-packs</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                  <p>Vibrant Multi-Color Backpacks for Stylish Adventure Seekers.</p>
                  </div>
               </div>
             </div>
@@ -1477,10 +1484,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Beggy Jeans </h4>
+                  <h4 class="showcase-title">Beggy caps </h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                  <p>Trendy Beggy Caps for Casual Street Style Statements.</p>
                  </div>
               </div>
             </div>
@@ -1493,7 +1500,7 @@ if (isset($_SESSION['logout_message'])) {
                   <h4 class="showcase-title">Bootcut style</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing  </p>
+                  <p>Classic Bootcut Style: Timeless Elegance with a Modern Twist.</p>
                  </div>
               </div>
             </div>
@@ -1503,10 +1510,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">High Wasted Bell Bottoms</h4>
+                  <h4 class="showcase-title">High Wasted shirts</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                  <p>Elevated Elegance: High-Waisted Shirts for Stylish Sophistication.</p>
                  </div>
               </div>
             </div>
@@ -1520,10 +1527,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Formal Dresses</h4>
+                  <h4 class="showcase-title">Formal shoes</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                  <p>Refined Footwear: Classic Formal Shoes for Polished Elegance. </p>
                  </div>
               </div>
             </div>
@@ -1533,10 +1540,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Casual Jeans Jacket </h4>
+                  <h4 class="showcase-title">Casual modern purse </h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing  </p>
+                  <p>Contemporary Casual Purse: Effortless Style for Everyday Chic. </p>
                  </div>
               </div>
             </div>
@@ -1546,10 +1553,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Gym & Sports Wear</h4>
+                  <h4 class="showcase-title">casual shirts Wear</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                  <p>Relaxed Casual Shirts: Effortless Comfort with Everyday Style. </p>
                  </div>
               </div>
             </div>
@@ -1563,10 +1570,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Floral Print Casual Shirts</h4>
+                  <h4 class="showcase-title">Floral Print Casual purse</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                  <p>Chic Floral Print Purse for Casual Eleganceg</p>
                  </div>
               </div>
             </div>
@@ -1576,10 +1583,10 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Ruffled solid long Sleeves</h4>
+                  <h4 class="showcase-title">Ruffled solid square Cushion</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                  <p>Elegant Ruffled Solid Square Cushion for Cozy Comfort. </p>
                  </div>
               </div>
             </div>
@@ -1589,17 +1596,19 @@ if (isset($_SESSION['logout_message'])) {
               </a>
               <div class="show-case-content">
                 <a href="details.html">
-                  <h4 class="showcase-title">Multi-color V-neck T-shirt</h4>
+                  <h4 class="showcase-title">Multi-color bag-packs</h4>
                 </a>
                 <div class="product-catagory">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                  <p>Vibrant Multi-Color Backpacks for Stylish Adventure Seekers.</p>
                  </div>
               </div>
             </div>
            </div>
         </div>
       </section>
+    
       <script>
+        
 document.addEventListener('DOMContentLoaded', function () {
   // Fetch products from get_product.php using the Fetch API
   fetch('get_product.php')
