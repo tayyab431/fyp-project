@@ -1,3 +1,57 @@
+
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+$path = dirname(__FILE__);
+//submit_rating.php
+include($path . '/../../session/session.php');
+$pdo = new PDO("mysql:host=172.18.0.2;dbname=clothdatabase", "root", "786110");
+// Get the manufacturer_id from the URL
+$manufacturerId = $_GET['manufacturer_id'];
+
+// Query to retrieve manufacturer's profile information
+$profileQuery = "SELECT * FROM panel_users WHERE id = :manufacturerId";
+$profileStatement = $pdo->prepare($profileQuery);
+$profileStatement->bindParam(':manufacturerId', $manufacturerId, PDO::PARAM_INT);
+$profileStatement->execute();
+$profileData = $profileStatement->fetch(PDO::FETCH_ASSOC);
+$manufacturerName = $profileData['name'];
+// Query to retrieve reviews for the manufacturer
+$reviewsQuery = "SELECT * FROM review_table WHERE manufacturer_id = :manufacturerId";
+$reviewsStatement = $pdo->prepare($reviewsQuery);
+$reviewsStatement->bindParam(':manufacturerId', $manufacturerId, PDO::PARAM_INT);
+$reviewsStatement->execute();
+$reviewsData = $reviewsStatement->fetchAll(PDO::FETCH_ASSOC);
+
+
+function get($table, $condition = null, $col = '*')
+{
+    global $con;
+
+    $query_text = "SELECT $col FROM $table WHERE 1=1 $condition";
+    $stmt = $con->prepare($query_text);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $result;
+}
+
+if ($_SESSION['user_type'] == 'Customer') {
+    $id = $_SESSION['login_user_id']; 
+    $cond = "AND id=$id"; 
+    $data = get('panel_users', $cond);
+
+    // Check if data exists in the result
+    if (!empty($data)) {
+        // Assuming there is only one row per user, you can directly access the first element
+        $name = $data[0]['name'];
+ } else {
+        echo "User data not found.";
+    }
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -25,6 +79,12 @@
     width: 24px;
     height: 24px;
   }
+  .manufacturer-profile-img {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%; /* To make it circular if desired */
+    border: 2px solid #ccc; /* Border around the image */
+}
 </style>
 <body>
     <div class="container">
@@ -33,15 +93,17 @@
         <img src="icons8-back-50 (1).png" alt="back icon" >
         
       </a>
-    	<h1 class="mt-5 mb-5">What customer say For Manufacturer </h1>
+    	<h2 class="mt-5 mb-5">What customer say For <?php echo $manufacturerName; ?></h2>
     	<div class="card">
     		<div class="card-header">Overall Ratings</div>
     		<div class="card-body">
     			<div class="row">
+                <?php if ($profileData) { ?>
     				<div class="col-sm-4 text-center">
-    					<h1 class="text-warning mt-4 mb-4">
+                    <img src="../../Dashboard/includes/profiles/<?php echo $profileData['profile_image_path']; ?>" alt="Manufacturer Profile" class="manufacturer-profile-img">
+    					<h3 class="text-warning mt-4 mb-4">
     						<b><span id="average_rating">0.0</span> / 5</b>
-    					</h1>
+    					</h3>
     					<div class="mb-3">
     						<i class="fas fa-star star-light mr-1 main_star"></i>
                             <i class="fas fa-star star-light mr-1 main_star"></i>
@@ -50,6 +112,7 @@
                             <i class="fas fa-star star-light mr-1 main_star"></i>
 	    				</div>
     					<h3><span id="total_review">0</span> Review</h3>
+                        <?php } ?>
     				</div>
     				<div class="col-sm-4">
     					<p>

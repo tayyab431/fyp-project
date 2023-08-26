@@ -1,6 +1,4 @@
-<?php
-include('include/connect.php');
-?>
+
 <?php
 $path = dirname(__FILE__);
 include($path . '/language/lang.php');

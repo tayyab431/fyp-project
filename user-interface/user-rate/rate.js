@@ -83,14 +83,14 @@ $(document).ready(function(){
         }
     });
     function load_rating_data(manufacturerId) {
-        console.log("Loading reviews for manufacturer ID:", manufacturerId);
+        
         $.ajax({
             url: "submit_rating.php",
             method: "POST",
             data: { action: 'load_data', manufacturer_id: manufacturerId },
             dataType: "JSON",
             success: function (data) {
-                console.log("Received data:", data);
+               
                 $('#average_rating').text(data.average_rating);
                 $('#total_review').text(data.total_review);
 
@@ -175,7 +175,7 @@ $(document).ready(function(){
                     }
 
                     $('#review_content').html(html);
-                    console.log(manufacturerId);
+                    
                 }
             }
         })

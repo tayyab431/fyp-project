@@ -103,7 +103,7 @@ $insertStmt->bindParam(':conf_password', $hashedConfPassword);
 // Execute the statement and check for errors
 if ($insertStmt->execute()) {
     echo "<script>alert('Data inserted successfully')</script>";
-    echo "<script>window.location.href = 'signform.php';</script>";
+    echo "<script>window.location.href = 'login.php';</script>";
 } else {
     die($insertStmt->errorInfo());
 }

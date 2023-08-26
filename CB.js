@@ -8,39 +8,40 @@ const body = document.querySelector("body"),
     const logo = document.getElementById('logo');
     const darkLogo = document.getElementById('dark-logo');
 
-    let getMode = localStorage.getItem("mode");
-        if(getMode && getMode === "dark-mode"){
-          body.classList.add("dark");
-        }
-// js code to toggle dark and light mode
-    modeToggle.addEventListener("click" , () =>{
-      modeToggle.classList.toggle("active");
-      body.classList.toggle("dark");
-     // Toggle the display of the light and dark logos based on the dark mode state
-  if (document.body.classList.contains('dark')) {
+// Function to set the mode in local storage
+function setModeInLocalStorage(mode) {
+  localStorage.setItem("mode", mode);
+}
+
+// Function to toggle between dark and light mode
+function toggleDarkMode() {
+  body.classList.toggle("dark");
+
+  // Toggle the display of the light and dark logos based on the dark mode state
+  if (body.classList.contains('dark')) {
     logo.style.display = 'inline-block'; // Hide the light logo in dark mode
     darkLogo.style.display = 'none'; // Show the dark logo in dark mode
   } else {
     logo.style.display = 'none'; // Show the light logo in light mode
     darkLogo.style.display = 'inline-block'; // Hide the dark logo in light mode
   }
-     
+
   // Store the user-selected mode in local storage
   const selectedMode = body.classList.contains("dark") ? "dark-mode" : "light-mode";
   setModeInLocalStorage(selectedMode);
-      // js code to keep user selected mode even page refresh or file reopen
-      if (storedMode === "dark-mode") {
-        body.classList.add("dark");
-      }else{
-        body.classList.remove("dark");
-      }
-       // js code to keep user selected mode even page refresh or file reopen
-     // if(!body.classList.contains("dark")){
-       // localStorage.setItem("mode" , "light-mode");
-   // }else{
-      //  localStorage.setItem("mode" , "dark-mode");
-   // }
-    });
+}
+
+// Check local storage for saved mode and apply it
+const getMode = localStorage.getItem("mode");
+if (getMode && getMode === "dark-mode") {
+  toggleDarkMode();
+}
+
+// Add event listener to mode toggle button
+modeToggle.addEventListener("click", () => {
+  modeToggle.classList.toggle("active");
+  toggleDarkMode();
+});
 
 // js code to toggle search box
       searchToggle.addEventListener("click" , () =>{
@@ -269,6 +270,18 @@ var swiperCatagories = new Swiper('.catagories__container', {
     disableOnInteraction: false,  
   },
 });
+// Swiper container element
+var swiperContainer = document.querySelector('.new__container');
+
+// Pause swiper on mouse hover
+swiperContainer.addEventListener('mouseenter', function () {
+  swiperProducts.autoplay.stop();
+});
+
+// Resume swiper when mouse leaves
+swiperContainer.addEventListener('mouseleave', function () {
+  swiperProducts.autoplay.start();
+});
 /*=============== SWIPER PRODUCTS ===============*/
 var swiperProducts = new Swiper('.new__container', { 
   spaceBetween: 24,
@@ -297,6 +310,18 @@ autoplay: {
   delay: 1300,  
   disableOnInteraction: false,  
 },
+});
+// Swiper container element
+var swiperContainer = document.querySelector('.catagories__container');
+
+// Pause swiper on mouse hover
+swiperContainer.addEventListener('mouseenter', function () {
+  swiperCatagories.autoplay.stop();
+});
+
+// Resume swiper when mouse leaves
+swiperContainer.addEventListener('mouseleave', function () {
+  swiperCatagories.autoplay.start();
 });
 /*=============== PRODUCTS TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]'),

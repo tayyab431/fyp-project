@@ -1,8 +1,9 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+$path = dirname(__FILE__);
 //submit_rating.php
-
+include($path . '/../../session/session.php');
 $pdo = new PDO("mysql:host=172.18.0.2;dbname=clothdatabase", "root", "786110");
 // Get the manufacturer_id from the URL
 $manufacturerId = $_GET['manufacturer_id'];
@@ -21,6 +22,32 @@ $reviewsStatement->bindParam(':manufacturerId', $manufacturerId, PDO::PARAM_INT)
 $reviewsStatement->execute();
 $reviewsData = $reviewsStatement->fetchAll(PDO::FETCH_ASSOC);
 
+
+function get($table, $condition = null, $col = '*')
+{
+    global $con;
+
+    $query_text = "SELECT $col FROM $table WHERE 1=1 $condition";
+    $stmt = $con->prepare($query_text);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $result;
+}
+
+if ($_SESSION['user_type'] == 'Customer') {
+    $id = $_SESSION['login_user_id']; 
+    $cond = "AND id=$id"; 
+    $data = get('panel_users', $cond);
+
+    // Check if data exists in the result
+    if (!empty($data)) {
+        // Assuming there is only one row per user, you can directly access the first element
+        $name = $data[0]['name'];
+ } else {
+        echo "User data not found.";
+    }
+}
 
 ?>
 
@@ -176,6 +203,9 @@ $reviewsData = $reviewsStatement->fetchAll(PDO::FETCH_ASSOC);
   	</div>
 </div>
 <script src="rate.js"></script>
+<script>
+    var login_user_id = <?php echo json_encode($login_user_id); ?>;
+</script>
 <style>
 .progress-label-left
 {

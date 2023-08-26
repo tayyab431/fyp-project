@@ -5,7 +5,7 @@ include('connection/register.php');
 $path = dirname(__FILE__);
 include($path . '/language/lang.php');
 include($path . '/language/language-code.php');
-include($path . '/session/session.php');
+
 
 
 ?>

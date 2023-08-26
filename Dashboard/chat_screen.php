@@ -289,7 +289,10 @@ $cond = "AND room_id=$room_idD";
 $chats = get('chat', $cond);
 
 
-$last_message_sender_id = ''; // Initialize an empty variable to store the sender's ID
+$last_message_sender_name = ''; // Initialize the variable to store sender's name
+$last_message_timestamp = '';   // Initialize the variable to store timestamp
+
+$last_message_sender_id = '';  // Initialize an empty variable to store the sender's ID
 
 if (!empty($chats)) {
     // Sort the chat messages by timestamp in descending order
@@ -409,37 +412,39 @@ if (!empty($data)) {
 $cond = "AND room_id=$room_id";
 $chats = get('chat', $cond);
 if (!empty($chats)) {
-    foreach ($chats as $c) {
-        // Fetch the sender's name from the database based on sender_id
-        $sender_name = "";
-        if ($c['sender_id'] == $uid) {
-            $m_class = 'me';
-            // Set the name for the sender as "You"
-            $sender_name = "You";
-        } else {
-            $m_class = 'you';
-            // Fetch the receiver's name from the database based on receiver_id (here, $other_user is receiver's ID)
-            // Replace "users" with the actual table name where user details are stored
-            $receiver_name = ""; // Set the default value if receiver's name not found in the database
-            $receiver_id = $other_user; // Assuming $other_user is receiver's ID
-            $receiver_data = get('panel_users', "AND id=$receiver_id");
-            if (!empty($receiver_data)) {
-                // Assuming that the name column in the "users" table contains the name of the user
-                $receiver_name = $receiver_data[0]['name'];
-            }
-        }
-        ?>
-        <div class="bubble <?= $m_class ?>" data-message-id="<?php echo $c['id']; ?>">
-            <?php
-            // Display the sender's name along with the chat message for "me" class
-            if ($m_class == 'me') {
-                echo '<p class="sender-name">' . $sender_name . '</p>';
-            }
-            // Display the receiver's name along with the chat message for "you" class
-            if ($m_class == 'you') {
-                echo '<p class="receiver-name">' . $receiver_name . '</p>';
-            }
-            ?>
+  foreach ($chats as $c) {
+      // Fetch the sender's name from the database based on sender_id
+      $sender_name = "";
+      if ($c['sender_id'] == $uid) {
+          $m_class = 'me';
+          // Set the name for the sender as "You"
+          $sender_name = "You";
+      } else {
+          $m_class = 'you';
+          // Fetch the receiver's name from the database based on receiver_id (here, $other_user is receiver's ID)
+          // Replace "users" with the actual table name where user details are stored
+          $receiver_name = ""; // Set the default value if receiver's name not found in the database
+          $receiver_id = $other_user; // Assuming $other_user is receiver's ID
+          $receiver_data = get('panel_users', "AND id=$receiver_id");
+          if (!empty($receiver_data)) {
+              // Assuming that the name column in the "users" table contains the name of the user
+              $receiver_name = $receiver_data[0]['name'];
+          }
+      }
+      ?>
+      <div class="bubble <?= $m_class ?>" data-message-id="<?php echo $c['id']; ?>">
+          <?php
+          // Display the sender's name along with the chat message for "me" class
+          if ($m_class == 'me') {
+              echo '<p class="sender-name">' . $sender_name . '</p>';
+          }
+          // Display the receiver's name along with the chat message for "you" class
+          if ($m_class == 'you') {
+              echo '<p class="receiver-name">' . $receiver_name . '</p>';
+          }
+          ?>
+
+
                     <?php
 if ($c['is_offer'] == 1) {
     $pname = '';
@@ -499,6 +504,7 @@ if ($c['is_offer'] == 1) {
     <?php }
 }
 ?>
+
 
               </div>
             </div>

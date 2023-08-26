@@ -13,7 +13,7 @@ $password = '786110';
 try {
     $con = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $password);
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
+    
     //header("Location: user_interface.php");
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
@@ -148,21 +148,6 @@ echo "<script>alert('Invalid username or password')</script>";
 echo "<script>window.location.href = 'login.php';</script>";
 exit();
 
-    if (isset($_SESSION['login_user_id'])) {
-        $cust = $_SESSION['login_user_id'];
-        $menu = $_GET['menu'];
-        $date = date('Y-m-d');
 
-        $cond = "AND u2=$cust AND u1=$menu";
-        $cond2 = "AND u1=$cust AND u2=$menu";
-        $data = get('chat_room', $cond);
-        $data2 = get('chat_room', $cond2);
-        if (empty($data) && empty($data2)) {
-            $query = "INSERT INTO `chat_room`(`u1`, `u2`, `date`, `status`)
-            VALUES ('$menu','$cust','$date',1)";
-            $stmt = $con->prepare($query);
-            $stmt->execute();
-        }
-    }
 
 ?>

@@ -17,14 +17,16 @@
 }
 #manufacturerProfiles {
     display: flex;
-     /* To wrap cards to next line if container width is exceeded */
-  }
-  
-  .suplliers {
-    flex: 0 0 33%; /* To set each card's width to one-third of the container width */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line when container width is exceeded */
+}
+
+.suplliers {
+    flex: 0 0 33.33%; /* To set each card's width to one-third of the container width */
     padding: 10px;
+    box-sizing: border-box; /* Include padding in the element's width calculation */
     /* Add any other styling as per your design */
-  }
+}
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -456,6 +458,7 @@ body.dark .search-field i
     }
     
 }
+ 
 @media (max-width:768px) {
    .home
    {
@@ -1308,7 +1311,7 @@ border-radius: 50%;
     padding: 80px;
     background: var(--body-color);
     margin: 12px; 
-    display: grid;
+    
     grid-template-columns: repeat(3,1fr);
     gap: 1.5rem;
     font-family: 'Poppins', sans-serif;    
